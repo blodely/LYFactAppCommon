@@ -1,5 +1,5 @@
 //
-//  LYFactAppCommon.h
+//	FACBaseNavVC.h
 //	LYFactAppCommon
 //
 //	CREATED BY LUO YU ON 2019-02-01.
@@ -24,13 +24,9 @@
 //	THE SOFTWARE.
 //
 
-#import <Foundation/Foundation.h>
-#import <UIKit/UIKit.h>
-#import <LYFactAppCommon/FACBaseVC.h>
-#import <LYFactAppCommon/FACBaseNavVC.h>
-#import <LYFactAppCommon/FACBaseTabBarVC.h>
+#import <QMUIKit/QMUIKit.h>
 
 
-@interface LYFactAppCommon : NSObject
+@interface FACBaseNavVC : QMUINavigationController
 
 @end

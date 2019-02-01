@@ -25,6 +25,8 @@
 //
 
 #import "LYViewController.h"
+#import <LYFactAppCommon/LYFactAppCommon.h>
+
 
 @interface LYViewController () {}
 @end

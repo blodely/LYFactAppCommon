@@ -1,5 +1,5 @@
 //
-//  LYFactAppCommon.h
+//  FACBaseVC.m
 //	LYFactAppCommon
 //
 //	CREATED BY LUO YU ON 2019-02-01.
@@ -24,13 +24,50 @@
 //	THE SOFTWARE.
 //
 
-#import <Foundation/Foundation.h>
-#import <UIKit/UIKit.h>
-#import <LYFactAppCommon/FACBaseVC.h>
-#import <LYFactAppCommon/FACBaseNavVC.h>
-#import <LYFactAppCommon/FACBaseTabBarVC.h>
+#import "FACBaseVC.h"
 
 
-@interface LYFactAppCommon : NSObject
+@interface FACBaseVC () {}
+@end
+
+@implementation FACBaseVC
+
+// MARK: - ACTION
+
+// MARK: - INIT
+
+// MARK: VIEW LIFE CYCLE
+
+- (void)loadView {
+	[super loadView];
+	
+	self.view.backgroundColor = [UIColor whiteColor];
+}
+
+- (void)viewDidLoad {
+	[super viewDidLoad];
+	// DO ANY ADDITIONAL SETUP AFTER LOADING THE VIEW.
+}
+
+// MARK: MEMORY MANAGEMENT
+
+/*
+- (void)dealloc {
+}
+*/
+
+// MARK: - METHOD
+
+// MARK: PRIVATE METHOD
+
+// MARK: PROPERTY
+
+// MARK: BLOCK
+
+// MARK: - DELEGATE
+
+// MARK:
+
+// MARK: - NOTIFICATION
 
 @end
