@@ -1,5 +1,5 @@
 //
-//  LYFactAppCommon.h
+//  FACBannerCell.m
 //	LYFactAppCommon
 //
 //	CREATED BY LUO YU ON 2019-02-01.
@@ -24,16 +24,16 @@
 //	THE SOFTWARE.
 //
 
-#import <Foundation/Foundation.h>
-#import <UIKit/UIKit.h>
-#import <QMUIKit/QMUIKit.h>
+#import "FACBannerCell.h"
+#import <LYCategory/LYCategory.h>
+#import <Masonry/Masonry.h>
 
-#import <LYFactAppCommon/FACBaseVC.h>
-#import <LYFactAppCommon/FACBaseNavVC.h>
-#import <LYFactAppCommon/FACBaseTabBarVC.h>
 
-#import <LYFactAppCommon/FACBannerCell.h>
+NSString *const FACBannerCellIdentifier = @"FACBannerCellIdentifier";
 
-@interface LYFactAppCommon : NSObject
+@interface FACBannerCell () {}
+@end
+
+@implementation FACBannerCell
 
 @end

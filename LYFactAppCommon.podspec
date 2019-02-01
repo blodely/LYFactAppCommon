@@ -23,7 +23,7 @@ LYFactAppCommon:
 
   s.ios.deployment_target = '11.0'
 
-  s.source_files = 'LYFactAppCommon/Classes/**/*'
+  s.source_files = 'LYFactAppCommon/Classes/base/*', 'LYFactAppCommon/Classes/custom/*', 'LYFactAppCommon/Classes/**/*'
   
   # s.resource_bundles = {
   #   'LYFactAppCommon' => ['LYFactAppCommon/Assets/*.png']
