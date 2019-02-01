@@ -31,9 +31,64 @@
 
 NSString *const FACBannerCellIdentifier = @"FACBannerCellIdentifier";
 
-@interface FACBannerCell () {}
+@interface FACBannerCell () {
+}
 @end
 
 @implementation FACBannerCell
+
+- (instancetype)initWithFrame:(CGRect)frame {
+	if (self = [super initWithFrame:frame]) {
+		[self initial];
+	}
+	return self;
+}
+
+- (void)initial {
+	
+	{
+		self.backgroundColor = [UIColor clearColor];
+	}
+	
+	{
+		// MARK: 容器 CONTAINER
+		UIView *view = [[UIView alloc] init];
+		[view roundedCornerRadius:6];
+		[self addSubview:view];
+		vCont = view;
+		
+		[view mas_makeConstraints:^(MASConstraintMaker *make) {
+			make.edges.equalTo(self);
+		}];
+	}
+	
+	{
+		// MARK: 照片 PHOTO
+		UIImageView *view = [[UIImageView alloc] init];
+		view.contentMode = UIViewContentModeScaleAspectFill;
+		[vCont addSubview:view];
+		_ivPhoto = view;
+		
+		[view mas_makeConstraints:^(MASConstraintMaker *make) {
+			make.edges.equalTo(self->vCont);
+		}];
+	}
+	
+	{
+		// MARK: 标签 LABEL
+		UILabel *view = [[UILabel alloc] init];
+		view.font = [UIFont systemFontOfSize:14];
+		view.textAlignment = NSTextAlignmentRight;
+		view.textColor = [UIColor whiteColor];
+		view.shadowColor = [UIColor colorWithWhite:0 alpha:0.3];
+		view.shadowOffset = (CGSize){1, 1};
+		[vCont addSubview:view];
+		_lblTitle = view;
+		
+		[view mas_makeConstraints:^(MASConstraintMaker *make) {
+			make.bottom.right.equalTo(self->vCont).offset(-6);
+		}];
+	}
+}
 
 @end

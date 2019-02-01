@@ -29,6 +29,11 @@
 
 FOUNDATION_EXPORT NSString *const FACBannerCellIdentifier;
 
-@interface FACBannerCell : UICollectionViewCell
+@interface FACBannerCell : UICollectionViewCell {
+	__weak UIView *vCont;
+}
+
+@property (nonatomic, weak) UIImageView *ivPhoto;
+@property (nonatomic, weak) UILabel *lblTitle;
 
 @end
