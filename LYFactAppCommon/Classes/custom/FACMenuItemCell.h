@@ -1,5 +1,5 @@
 //
-//  LYFactAppCommon.h
+//  FACMenuItemCell.h
 //	LYFactAppCommon
 //
 //	CREATED BY LUO YU ON 2019-02-01.
@@ -24,18 +24,11 @@
 //	THE SOFTWARE.
 //
 
-#import <Foundation/Foundation.h>
-#import <UIKit/UIKit.h>
 #import <QMUIKit/QMUIKit.h>
 
-#import <LYFactAppCommon/FACBaseVC.h>
-#import <LYFactAppCommon/FACBaseNavVC.h>
-#import <LYFactAppCommon/FACBaseTabBarVC.h>
 
-#import <LYFactAppCommon/FACBannerCell.h>
-#import <LYFactAppCommon/FACMenuItemCell.h>
+FOUNDATION_EXPORT NSString *const FACMenuItemCellIdentifier;
 
-
-@interface LYFactAppCommon : NSObject
+@interface FACMenuItemCell : QMUITableViewCell
 
 @end
