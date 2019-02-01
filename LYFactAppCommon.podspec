@@ -31,7 +31,7 @@ LYFactAppCommon:
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   
-  s.frameworks = 'UIKit', 'MapKit'
+  s.frameworks = 'UIKit', 'MapKit', 'WebKit'
   
   s.dependency 'AFNetworking'
   s.dependency 'LYCategory'
