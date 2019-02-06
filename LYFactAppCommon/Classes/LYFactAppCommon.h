@@ -34,6 +34,10 @@
 
 #import <LYFactAppCommon/FACBannerCell.h>
 #import <LYFactAppCommon/FACMenuItemCell.h>
+#import <LYFactAppCommon/FACNewsItemCell.h>
+
+
+FOUNDATION_EXPORT CGFloat const FAC_PADDING;
 
 
 @interface LYFactAppCommon : NSObject

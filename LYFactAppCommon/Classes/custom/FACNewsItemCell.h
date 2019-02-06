@@ -1,8 +1,8 @@
 //
-//  LYFactAppCommon.m
+//	FACNewsItemCell.h
 //	LYFactAppCommon
 //
-//	CREATED BY LUO YU ON 2019-02-01.
+//	CREATED BY LUO YU ON 2019-02-06.
 //	Copyright (c) 2019 骆昱 (Luo Yu, blodely) <indie.luo@gmail.com>
 //
 //	Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -24,12 +24,15 @@
 //	THE SOFTWARE.
 //
 
-#import "LYFactAppCommon.h"
+#import <QMUIKit/QMUIKit.h>
 
 
-CGFloat const FAC_PADDING = 15.0f;
+FOUNDATION_EXPORT NSString *const FACNewsItemCellIdentifier;
 
+@interface FACNewsItemCell : QMUITableViewCell
 
-@implementation LYFactAppCommon
+@property (nonatomic, weak) UILabel *lblTitle;
+@property (nonatomic, weak) UILabel *lblAuthor;
+@property (nonatomic, weak) UIImageView *ivPic;
 
 @end

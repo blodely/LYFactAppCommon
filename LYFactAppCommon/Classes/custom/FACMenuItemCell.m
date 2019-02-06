@@ -35,4 +35,10 @@ NSString *const FACMenuItemCellIdentifier = @"FACMenuItemCellIdentifier";
 
 @implementation FACMenuItemCell
 
+- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
+	if (self = [super initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:reuseIdentifier]) {
+	}
+	return self;
+}
+
 @end
