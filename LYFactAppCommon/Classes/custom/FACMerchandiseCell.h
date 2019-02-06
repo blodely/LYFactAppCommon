@@ -1,8 +1,8 @@
 //
-//  LYFactAppCommon.h
+//	FACMerchandiseCell.h
 //	LYFactAppCommon
 //
-//	CREATED BY LUO YU ON 2019-02-01.
+//	CREATED BY LUO YU ON 2019-02-06.
 //	Copyright (c) 2019 骆昱 (Luo Yu, blodely) <indie.luo@gmail.com>
 //
 //	Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -24,23 +24,30 @@
 //	THE SOFTWARE.
 //
 
-#import <Foundation/Foundation.h>
-#import <UIKit/UIKit.h>
-#import <QMUIKit/QMUIKit.h>
-
-#import <LYFactAppCommon/FACBaseVC.h>
-#import <LYFactAppCommon/FACBaseNavVC.h>
-#import <LYFactAppCommon/FACBaseTabBarVC.h>
-
-#import <LYFactAppCommon/FACBannerCell.h>
-#import <LYFactAppCommon/FACMenuItemCell.h>
-#import <LYFactAppCommon/FACNewsItemCell.h>
-#import <LYFactAppCommon/FACMerchandiseCell.h>
+#import <LYCore/LYCore.h>
 
 
-FOUNDATION_EXPORT CGFloat const FAC_PADDING;
+FOUNDATION_EXPORT NSString *const FACMerchandiseCellIdentifier;
 
+@class FACMerchandiseCell;
 
-@interface LYFactAppCommon : NSObject
+@protocol FACMerchandiseCellDelegate <NSObject>
+
+@optional
+- (void)askActionInFACMerchandiseCell:(FACMerchandiseCell *)cell;
+
+@end
+
+@interface FACMerchandiseCell : LYCollectionCell {
+	
+	__weak LYView *vCont;
+}
+
+@property (nonatomic, weak) UIImageView *ivPic;
+@property (nonatomic, weak) UILabel *lblTitle;
+@property (nonatomic, weak) UILabel *lblPrice;
+@property (nonatomic, weak) UIControl *cAsk;
+
+@property (weak, nonatomic) id <FACMerchandiseCellDelegate> delegate;
 
 @end

@@ -38,5 +38,6 @@ LYFactAppCommon:
   s.dependency 'FCUUID'
   s.dependency 'QMUIKit'
   s.dependency 'Masonry'
+  s.dependency 'LYCore'
   
 end
