@@ -56,7 +56,8 @@ NSString *const FACMerchandiseCellIdentifier = @"FACMerchandiseCellIdentifier";
 	{
 		// MARK: CONTAINER VIEW
 		LYView *view = [LYView view];
-		self.backgroundColor = view.backgroundColor = [UIColor clearColor];
+		self.backgroundColor = [UIColor clearColor];
+		view.backgroundColor = [UIColor whiteColor];
 		[view roundedCornerRadius:4];
 		[self addSubview:view];
 		vCont = view;
