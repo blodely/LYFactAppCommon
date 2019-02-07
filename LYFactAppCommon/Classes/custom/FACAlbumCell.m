@@ -41,6 +41,8 @@ NSString *const FACAlbumCellIdentifier = @"FACAlbumCellIdentifier";
 - (void)initial {
 	[super initial];
 	
+	self.backgroundColor = [UIColor clearColor];
+	
 	{
 		// MARK: PHOTO FRAME
 		UIView *view = [[UIView alloc] init];
@@ -57,6 +59,8 @@ NSString *const FACAlbumCellIdentifier = @"FACAlbumCellIdentifier";
 	{
 		// MARK: PHOTO VIEW
 		UIImageView *view = [[UIImageView alloc] init];
+		view.contentMode = UIViewContentModeScaleAspectFill;
+		view.clipsToBounds = YES;
 		[vFrame addSubview:view];
 		_ivCover = view;
 		
