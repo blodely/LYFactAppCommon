@@ -42,6 +42,19 @@ NSString *const FACNewsItemCellIdentifier = @"FACNewsItemCellIdentifier";
 	[super didInitializeWithStyle:style];
 	
 	{
+		// MARK: BOTTOM LINE
+		LYLine *view = [LYLine lineWithColor:[UIColor groupTableViewBackgroundColor]];
+		[self addSubview:view];
+		[view mas_makeConstraints:^(MASConstraintMaker *make) {
+			make.left.equalTo(self).offset(FAC_PADDING);
+			make.right.equalTo(self).offset(-FAC_PADDING);
+			make.bottom.equalTo(self);
+			make.height.mas_equalTo(PixelOne);
+		}];
+	}
+	
+	{
+		// MARK: TITLE LABEL
 		UILabel *view = [[UILabel alloc] init];
 		view.textColor = [UIColor darkGrayColor];
 		view.font = [UIFont systemFontOfSize:15];
@@ -54,6 +67,7 @@ NSString *const FACNewsItemCellIdentifier = @"FACNewsItemCellIdentifier";
 	}
 	
 	{
+		// MARK: AUTHOR LABEL
 		UILabel *view = [[UILabel alloc] init];
 		view.textColor = [UIColor grayColor];
 		view.font = [UIFont systemFontOfSize:13];
@@ -67,6 +81,7 @@ NSString *const FACNewsItemCellIdentifier = @"FACNewsItemCellIdentifier";
 	}
 	
 	{
+		// MARK: ATTACH PHOTO
 		UIImageView *view = [[UIImageView alloc] init];
 		[view roundedCornerRadius:3];
 		[self addSubview:view];
@@ -75,8 +90,8 @@ NSString *const FACNewsItemCellIdentifier = @"FACNewsItemCellIdentifier";
 		[view mas_makeConstraints:^(MASConstraintMaker *make) {
 			make.top.equalTo(self).offset(FAC_PADDING);
 			make.right.bottom.equalTo(self).offset(-FAC_PADDING);
-			make.height.mas_equalTo(50);
-			make.width.mas_equalTo(75);
+			make.height.mas_equalTo(70);
+			make.width.equalTo(view.mas_height).multipliedBy(1.5);
 		}];
 	}
 }
