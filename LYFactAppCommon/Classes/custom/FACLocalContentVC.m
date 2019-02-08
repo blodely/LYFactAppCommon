@@ -43,6 +43,12 @@
 
 // MARK: - INIT
 
+- (void)didInitialize {
+	[super didInitialize];
+	
+	self.hidesBottomBarWhenPushed = YES;
+}
+
 // MARK: VIEW LIFE CYCLE
 
 - (void)loadView {
