@@ -25,16 +25,53 @@
 //
 
 #import "FACLocalContentVC.h"
+#import <WebKit/WebKit.h>
+#import <LYCore/LYCore.h>
+#import <LYCategory/LYCategory.h>
+#import <Masonry/Masonry.h>
 
-@interface FACLocalContentVC ()
 
+@interface FACLocalContentVC () {
+	
+	__weak WKWebView *web;
+}
 @end
 
 @implementation FACLocalContentVC
 
+// MARK: - ACTION
+
+// MARK: - INIT
+
+// MARK: VIEW LIFE CYCLE
+
+- (void)loadView {
+	[super loadView];
+	
+	{
+		WKWebViewConfiguration *webconf = [[WKWebViewConfiguration alloc] init];
+		
+		WKWebView *view = [[WKWebView alloc] initWithFrame:CGRectZero configuration:webconf];
+		[self.view addSubview:view];
+		web = view;
+		
+		[view mas_makeConstraints:^(MASConstraintMaker *make) {
+			make.edges.equalTo(self.view);
+		}];
+	}
+}
+
 - (void)viewDidLoad {
 	[super viewDidLoad];
-	// Do any additional setup after loading the view.
+	// DO ANY ADDITIONAL SETUP AFTER LOADING THE VIEW.
+	
+	if (_ctTitle != nil) {
+		self.navigationItem.title = _ctTitle;
+	}
+	
+	if (_ctPage != nil) {
+		[web loadHTMLString:_ctPage baseURL:[NSURL URLWithString:@"http://open.luoyu.space"]];
+	}
 }
 
 @end

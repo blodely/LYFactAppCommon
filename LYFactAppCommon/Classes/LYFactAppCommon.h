@@ -32,6 +32,8 @@
 #import <LYFactAppCommon/FACBaseNavVC.h>
 #import <LYFactAppCommon/FACBaseTabBarVC.h>
 
+#import <LYFactAppCommon/FACLocalContentVC.h>
+
 #import <LYFactAppCommon/FACBannerCell.h>
 #import <LYFactAppCommon/FACMenuItemCell.h>
 #import <LYFactAppCommon/FACNewsItemCell.h>

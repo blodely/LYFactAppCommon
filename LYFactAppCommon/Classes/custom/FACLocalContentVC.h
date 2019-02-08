@@ -29,4 +29,7 @@
 
 @interface FACLocalContentVC : FACBaseVC
 
+@property (nonatomic, strong) NSString *ctTitle;
+@property (nonatomic, strong) NSString *ctPage;
+
 @end
