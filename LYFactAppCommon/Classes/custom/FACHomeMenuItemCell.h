@@ -1,8 +1,8 @@
 //
-//  LYFactAppCommon.h
+//	FACHomeMenuItemCell.h
 //	LYFactAppCommon
 //
-//	CREATED BY LUO YU ON 2019-02-01.
+//	CREATED BY LUO YU ON 2019-02-12.
 //	Copyright (c) 2019 骆昱 (Luo Yu, blodely) <indie.luo@gmail.com>
 //
 //	Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -24,27 +24,11 @@
 //	THE SOFTWARE.
 //
 
-#import <Foundation/Foundation.h>
-#import <UIKit/UIKit.h>
-#import <QMUIKit/QMUIKit.h>
-
-#import <LYFactAppCommon/FACBaseVC.h>
-#import <LYFactAppCommon/FACBaseNavVC.h>
-#import <LYFactAppCommon/FACBaseTabBarVC.h>
-
-#import <LYFactAppCommon/FACLocalContentVC.h>
-
-#import <LYFactAppCommon/FACBannerCell.h>
-#import <LYFactAppCommon/FACMenuItemCell.h>
-#import <LYFactAppCommon/FACNewsItemCell.h>
-#import <LYFactAppCommon/FACMerchandiseCell.h>
-#import <LYFactAppCommon/FACAlbumCell.h>
-#import <LYFactAppCommon/FACHomeMenuItemCell.h>
+#import <LYCore/LYCore.h>
 
 
-FOUNDATION_EXPORT CGFloat const FAC_PADDING;
+FOUNDATION_EXPORT NSString *const FACHomeMenuItemCellIdentifier;
 
-
-@interface LYFactAppCommon : NSObject
+@interface FACHomeMenuItemCell : LYCollectionCell
 
 @end
