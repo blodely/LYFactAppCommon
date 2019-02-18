@@ -35,4 +35,36 @@ NSString *const FACHomeMenuItemCellIdentifier = @"FACHomeMenuItemCellIdentifier"
 
 @implementation FACHomeMenuItemCell
 
+- (void)initial {
+	[super initial];
+	
+	{
+		UIImageView *view = [[UIImageView alloc] init];
+		view.contentMode = UIViewContentModeScaleAspectFit;
+		[self addSubview:view];
+		_ivIcon = view;
+		
+		[view mas_makeConstraints:^(MASConstraintMaker *make) {
+			make.top.equalTo(self).offset(4);
+			make.left.right.equalTo(self);
+			make.height.mas_equalTo(26);
+		}];
+	}
+	
+	{
+		UILabel *view = [[UILabel alloc] init];
+		view.textAlignment = NSTextAlignmentCenter;
+		view.font = [UIFont systemFontOfSize:15];
+		[self addSubview:view];
+		_lblTitle = view;
+		
+		[view mas_makeConstraints:^(MASConstraintMaker *make) {
+			make.top.equalTo(self->_ivIcon.mas_bottom).offset(6);
+			make.left.right.equalTo(self);
+			make.height.mas_equalTo(18);
+			make.bottom.equalTo(self).offset(6);
+		}];
+	}
+}
+
 @end

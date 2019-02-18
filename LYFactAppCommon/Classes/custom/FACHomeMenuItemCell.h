@@ -31,4 +31,7 @@ FOUNDATION_EXPORT NSString *const FACHomeMenuItemCellIdentifier;
 
 @interface FACHomeMenuItemCell : LYCollectionCell
 
+@property (nonatomic, weak) UILabel *lblTitle;
+@property (nonatomic, weak) UIImageView *ivIcon;
+
 @end
