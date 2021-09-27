@@ -25,8 +25,8 @@
 //
 
 #import "FACAlbumCell.h"
+#import <LYFactAppCommon/LYFactAppCommon.h>
 #import <LYCategory/LYCategory.h>
-#import <Masonry/Masonry.h>
 
 
 NSString *const FACAlbumCellIdentifier = @"FACAlbumCellIdentifier";
@@ -46,41 +46,46 @@ NSString *const FACAlbumCellIdentifier = @"FACAlbumCellIdentifier";
 	{
 		// MARK: PHOTO FRAME
 		UIView *view = [[UIView alloc] init];
+        view.translatesAutoresizingMaskIntoConstraints = NO;
 		view.backgroundColor = [UIColor whiteColor];
 		[self addSubview:view];
 		vFrame = view;
 		
-		[view mas_makeConstraints:^(MASConstraintMaker *make) {
-			make.top.left.right.equalTo(self);
-			make.height.equalTo(view.mas_width).multipliedBy(0.667);
-		}];
+        [view.topAnchor constraintEqualToAnchor:self.topAnchor].active = YES;
+        [view.bottomAnchor constraintEqualToAnchor:self.bottomAnchor].active = YES;
+        [view.leftAnchor constraintEqualToAnchor:self.leftAnchor].active = YES;
+        [view.rightAnchor constraintEqualToAnchor:self.rightAnchor].active = YES;
+        [view.heightAnchor constraintEqualToAnchor:view.widthAnchor multiplier:0.667].active = YES;
 	}
 	
 	{
 		// MARK: PHOTO VIEW
 		UIImageView *view = [[UIImageView alloc] init];
+        view.translatesAutoresizingMaskIntoConstraints = NO;
 		view.contentMode = UIViewContentModeScaleAspectFill;
 		view.clipsToBounds = YES;
 		[vFrame addSubview:view];
 		_ivCover = view;
 		
-		[view mas_makeConstraints:^(MASConstraintMaker *make) {
-			make.edges.equalTo(self->vFrame).insets(UIEdgeInsetsMake(8, 8, 8, 8));
-		}];
+        UIEdgeInsets insets = UIEdgeInsetsMake(8, 8, -8, -8);
+        [view.topAnchor constraintEqualToAnchor:vFrame.topAnchor constant:insets.top].active = YES;
+        [view.bottomAnchor constraintEqualToAnchor:vFrame.bottomAnchor constant:insets.bottom].active = YES;
+        [view.leftAnchor constraintEqualToAnchor:vFrame.leftAnchor constant:insets.left].active = YES;
+        [view.rightAnchor constraintEqualToAnchor:vFrame.rightAnchor constant:insets.right].active = YES;
 	}
 	
 	{
 		UILabel *view = [[UILabel alloc] init];
+        view.translatesAutoresizingMaskIntoConstraints = NO;
 		view.textAlignment = NSTextAlignmentCenter;
 		view.font = [UIFont systemFontOfSize:14];
 		view.textColor = [UIColor grayColor];
 		[self addSubview:view];
 		_lblTitle = view;
 		
-		[view mas_makeConstraints:^(MASConstraintMaker *make) {
-			make.top.equalTo(self->vFrame.mas_bottom).offset(8);
-			make.left.right.equalTo(self);
-		}];
+        [view.topAnchor constraintEqualToAnchor:vFrame.bottomAnchor constant:8].active = YES;
+        [view.leftAnchor constraintEqualToAnchor:self.leftAnchor].active = YES;
+        [view.rightAnchor constraintEqualToAnchor:self.rightAnchor].active = YES;
 	}
 }
 

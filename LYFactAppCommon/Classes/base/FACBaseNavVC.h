@@ -24,9 +24,9 @@
 //	THE SOFTWARE.
 //
 
-#import <QMUIKit/QMUIKit.h>
+#import <UIKit/UIKit.h>
 
 
-@interface FACBaseNavVC : QMUINavigationController
+@interface FACBaseNavVC : UINavigationController
 
 @end

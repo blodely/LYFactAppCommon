@@ -26,7 +26,6 @@
 
 #import "FACNewsItemCell.h"
 #import <LYCategory/LYCategory.h>
-#import <Masonry/Masonry.h>
 #import <LYFactAppCommon/LYFactAppCommon.h>
 
 
@@ -38,61 +37,61 @@ NSString *const FACNewsItemCellIdentifier = @"FACNewsItemCellIdentifier";
 
 @implementation FACNewsItemCell
 
-- (void)didInitializeWithStyle:(UITableViewCellStyle)style {
-	[super didInitializeWithStyle:style];
-	
+- (void)initial {
+    [super initial];
+
 	{
 		// MARK: BOTTOM LINE
-		LYLine *view = [LYLine lineWithColor:[UIColor groupTableViewBackgroundColor]];
+        UIView *view = [[UIView alloc] init];
+        view.translatesAutoresizingMaskIntoConstraints = NO;
+        view.backgroundColor = [UIColor groupTableViewBackgroundColor];
 		[self addSubview:view];
-		[view mas_makeConstraints:^(MASConstraintMaker *make) {
-			make.left.equalTo(self).offset(FAC_PADDING);
-			make.right.equalTo(self).offset(-FAC_PADDING);
-			make.bottom.equalTo(self);
-			make.height.mas_equalTo(PixelOne);
-		}];
+        
+        [view.leftAnchor constraintEqualToAnchor:self.leftAnchor constant:FAC_PADDING].active = YES;
+        [view.rightAnchor constraintEqualToAnchor:self.rightAnchor constant:-FAC_PADDING].active = YES;
+        [view.bottomAnchor constraintEqualToAnchor:self.bottomAnchor].active = YES;
+        [view.heightAnchor constraintEqualToConstant:1 / SCALE].active = YES;
 	}
 	
 	{
 		// MARK: TITLE LABEL
 		UILabel *view = [[UILabel alloc] init];
+        view.translatesAutoresizingMaskIntoConstraints = NO;
 		view.textColor = [UIColor darkGrayColor];
 		view.font = [UIFont systemFontOfSize:15];
 		[self addSubview:view];
 		_lblTitle = view;
 		
-		[view mas_makeConstraints:^(MASConstraintMaker *make) {
-			make.top.left.equalTo(self).offset(FAC_PADDING);
-		}];
+        [view.topAnchor constraintEqualToAnchor:self.topAnchor constant:FAC_PADDING];
+        [view.leftAnchor constraintEqualToAnchor:self.leftAnchor constant:FAC_PADDING];
 	}
 	
 	{
 		// MARK: AUTHOR LABEL
 		UILabel *view = [[UILabel alloc] init];
+        view.translatesAutoresizingMaskIntoConstraints = NO;
 		view.textColor = [UIColor grayColor];
 		view.font = [UIFont systemFontOfSize:13];
 		[self addSubview:view];
 		_lblAuthor = view;
 		
-		[view mas_makeConstraints:^(MASConstraintMaker *make) {
-			make.left.equalTo(self).offset(FAC_PADDING);
-			make.bottom.equalTo(self).offset(-FAC_PADDING);
-		}];
+        [view.leftAnchor constraintEqualToAnchor:self.leftAnchor constant:FAC_PADDING].active = YES;
+        [view.bottomAnchor constraintEqualToAnchor:self.bottomAnchor constant:-FAC_PADDING].active = YES;
 	}
 	
 	{
 		// MARK: ATTACH PHOTO
 		UIImageView *view = [[UIImageView alloc] init];
+        view.translatesAutoresizingMaskIntoConstraints = YES;
 		[view roundedCornerRadius:3];
 		[self addSubview:view];
 		_ivPic = view;
 		
-		[view mas_makeConstraints:^(MASConstraintMaker *make) {
-			make.top.equalTo(self).offset(FAC_PADDING);
-			make.right.bottom.equalTo(self).offset(-FAC_PADDING);
-			make.height.mas_equalTo(70);
-			make.width.equalTo(view.mas_height).multipliedBy(1.5);
-		}];
+        [view.topAnchor constraintEqualToAnchor:self.topAnchor constant:FAC_PADDING].active = YES;
+        [view.rightAnchor constraintEqualToAnchor:self.rightAnchor constant:-FAC_PADDING].active = YES;
+        [view.bottomAnchor constraintEqualToAnchor:self.bottomAnchor constant:-FAC_PADDING].active = YES;
+        [view.heightAnchor constraintEqualToConstant:70].active = YES;
+        [view.widthAnchor constraintEqualToAnchor:view.heightAnchor multiplier:1.5].active = YES;
 	}
 }
 

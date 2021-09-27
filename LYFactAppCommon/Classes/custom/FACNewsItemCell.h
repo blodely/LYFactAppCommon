@@ -24,12 +24,12 @@
 //	THE SOFTWARE.
 //
 
-#import <QMUIKit/QMUIKit.h>
+#import <LYFactAppCommon/FACBaseTableCell.h>
 
 
 FOUNDATION_EXPORT NSString *const FACNewsItemCellIdentifier;
 
-@interface FACNewsItemCell : QMUITableViewCell
+@interface FACNewsItemCell : FACBaseTableCell
 
 @property (nonatomic, weak) UILabel *lblTitle;
 @property (nonatomic, weak) UILabel *lblAuthor;

@@ -26,7 +26,6 @@
 
 #import "FACBannerCell.h"
 #import <LYCategory/LYCategory.h>
-#import <Masonry/Masonry.h>
 
 
 NSString *const FACBannerCellIdentifier = @"FACBannerCellIdentifier";
@@ -53,30 +52,35 @@ NSString *const FACBannerCellIdentifier = @"FACBannerCellIdentifier";
 	{
 		// MARK: 容器 CONTAINER
 		UIView *view = [[UIView alloc] init];
+        view.translatesAutoresizingMaskIntoConstraints = NO;
 		[view roundedCornerRadius:6];
 		[self addSubview:view];
 		vCont = view;
 		
-		[view mas_makeConstraints:^(MASConstraintMaker *make) {
-			make.edges.equalTo(self);
-		}];
+        [view.topAnchor constraintEqualToAnchor:self.topAnchor].active = YES;
+        [view.bottomAnchor constraintEqualToAnchor:self.bottomAnchor].active = YES;
+        [view.leftAnchor constraintEqualToAnchor:self.leftAnchor].active = YES;
+        [view.rightAnchor constraintEqualToAnchor:self.rightAnchor].active = YES;
 	}
 	
 	{
 		// MARK: 照片 PHOTO
 		UIImageView *view = [[UIImageView alloc] init];
+        view.translatesAutoresizingMaskIntoConstraints = NO;
 		view.contentMode = UIViewContentModeScaleAspectFill;
 		[vCont addSubview:view];
 		_ivPhoto = view;
 		
-		[view mas_makeConstraints:^(MASConstraintMaker *make) {
-			make.edges.equalTo(self->vCont);
-		}];
+        [view.topAnchor constraintEqualToAnchor:vCont.topAnchor].active = YES;
+        [view.bottomAnchor constraintEqualToAnchor:vCont.bottomAnchor].active = YES;
+        [view.leftAnchor constraintEqualToAnchor:vCont.leftAnchor].active = YES;
+        [view.rightAnchor constraintEqualToAnchor:vCont.rightAnchor].active = YES;
 	}
 	
 	{
 		// MARK: 标签 LABEL
 		UILabel *view = [[UILabel alloc] init];
+        view.translatesAutoresizingMaskIntoConstraints = NO;
 		view.font = [UIFont systemFontOfSize:14];
 		view.textAlignment = NSTextAlignmentRight;
 		view.textColor = [UIColor whiteColor];
@@ -85,9 +89,8 @@ NSString *const FACBannerCellIdentifier = @"FACBannerCellIdentifier";
 		[vCont addSubview:view];
 		_lblTitle = view;
 		
-		[view mas_makeConstraints:^(MASConstraintMaker *make) {
-			make.bottom.right.equalTo(self->vCont).offset(-6);
-		}];
+        [view.bottomAnchor constraintEqualToAnchor:vCont.bottomAnchor constant:-6];
+        [view.rightAnchor constraintEqualToAnchor:vCont.rightAnchor constant:-6];
 	}
 }
 

@@ -26,7 +26,7 @@
 
 #import "FACMerchandiseCell.h"
 #import <LYCategory/LYCategory.h>
-#import <Masonry/Masonry.h>
+#import <LYFactAppCommon/LYFactAppCommon.h>
 
 
 NSString *const FACMerchandiseCellIdentifier = @"FACMerchandiseCellIdentifier";
@@ -55,72 +55,74 @@ NSString *const FACMerchandiseCellIdentifier = @"FACMerchandiseCellIdentifier";
 	
 	{
 		// MARK: CONTAINER VIEW
-		LYView *view = [LYView view];
+		UIView *view = [[UIView alloc] init];
 		self.backgroundColor = [UIColor clearColor];
+        view.translatesAutoresizingMaskIntoConstraints = NO;
 		view.backgroundColor = [UIColor whiteColor];
 		[view roundedCornerRadius:4];
 		[self addSubview:view];
 		vCont = view;
 		
-		[view mas_makeConstraints:^(MASConstraintMaker *make) {
-			make.edges.equalTo(self);
-		}];
+        [view.topAnchor constraintEqualToAnchor:self.topAnchor].active = YES;
+        [view.bottomAnchor constraintEqualToAnchor:self.bottomAnchor].active = YES;
+        [view.leftAnchor constraintEqualToAnchor:self.leftAnchor].active = YES;
+        [view.rightAnchor constraintEqualToAnchor:self.rightAnchor].active = YES;
 	}
 	
 	{
 		// MARK: PICTURE VIEW
 		UIImageView *view = [[UIImageView alloc] init];
+        view.translatesAutoresizingMaskIntoConstraints = NO;
 		view.contentMode = UIViewContentModeScaleAspectFill;
 		[vCont addSubview:view];
 		_ivPic = view;
 		
-		[view mas_makeConstraints:^(MASConstraintMaker *make) {
-			make.top.left.right.equalTo(self->vCont);
-			make.height.equalTo(view.mas_width);
-		}];
+        [view.topAnchor constraintEqualToAnchor:vCont.topAnchor].active = YES;
+        [view.leftAnchor constraintEqualToAnchor:vCont.leftAnchor].active = YES;
+        [view.rightAnchor constraintEqualToAnchor:vCont.rightAnchor].active = YES;
+        [view.heightAnchor constraintEqualToAnchor:view.widthAnchor].active = YES;
 	}
 	
 	{
 		// MARK: TITLE LABEL
 		UILabel *view = [[UILabel alloc] init];
+        view.translatesAutoresizingMaskIntoConstraints = NO;
 		view.textColor = [UIColor darkGrayColor];
 		view.font = [UIFont systemFontOfSize:14];
 		[vCont addSubview:view];
 		_lblTitle = view;
-		
-		[view mas_makeConstraints:^(MASConstraintMaker *make) {
-			make.top.equalTo(self->_ivPic.mas_bottom).offset(10);
-			make.left.equalTo(self->vCont).offset(10);
-			make.right.equalTo(self->vCont).offset(-10);
-		}];
+        
+        [view.topAnchor constraintEqualToAnchor:_ivPic.bottomAnchor constant:10].active = YES;
+        [view.leftAnchor constraintEqualToAnchor:vCont.leftAnchor constant:10].active = YES;
+        [view.rightAnchor constraintEqualToAnchor:vCont.rightAnchor constant:-10].active = YES;
 	}
 	
 	{
 		// MARK: PRICE LABEL
 		UILabel *view = [[UILabel alloc] init];
+        view.translatesAutoresizingMaskIntoConstraints = NO;
 		view.font = [UIFont systemFontOfSize:13];
 		view.textColor = [UIColor redColor];
 		[vCont addSubview:view];
 		_lblPrice = view;
 		
-		[view mas_makeConstraints:^(MASConstraintMaker *make) {
-			make.top.equalTo(self->_lblTitle.mas_bottom).offset(10);
-			make.left.equalTo(self->vCont).offset(10);
-		}];
+        [view.topAnchor constraintEqualToAnchor:_lblTitle.bottomAnchor constant:10].active = YES;
+        [view.leftAnchor constraintEqualToAnchor:vCont.leftAnchor constant:10].active = YES;
 	}
 	
 	{
 		// MARK: ACTION CONTROL
 		UIControl *view = [[UIControl alloc] init];
+        view.translatesAutoresizingMaskIntoConstraints = NO;
 		[view roundedCornerRadius:15];
 		[vCont addSubview:view];
 		_cAsk = view;
 		
-		[view mas_makeConstraints:^(MASConstraintMaker *make) {
-			make.right.bottom.equalTo(self->vCont).offset(-10);
-			make.width.height.mas_equalTo(30);
-		}];
-		
+        [view.rightAnchor constraintEqualToAnchor:vCont.rightAnchor constant:-10].active = YES;
+        [view.bottomAnchor constraintEqualToAnchor:vCont.bottomAnchor constant:-10].active = YES;
+        [view.widthAnchor constraintEqualToConstant:30].active = YES;
+        [view.heightAnchor constraintEqualToConstant:30].active = YES;
+
 		[_cAsk addTarget:self action:@selector(askButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
 	}
 }

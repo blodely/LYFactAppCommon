@@ -25,6 +25,7 @@
 //
 
 #import "FACBaseTabBarVC.h"
+#import <LYFactAppCommon/LYFactAppCommon.h>
 
 
 @interface FACBaseTabBarVC () {}

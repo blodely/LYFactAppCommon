@@ -25,6 +25,7 @@
 //
 
 #import "FACBaseNavVC.h"
+#import <LYFactAppCommon/LYFactAppCommon.h>
 
 
 @interface FACBaseNavVC () {}

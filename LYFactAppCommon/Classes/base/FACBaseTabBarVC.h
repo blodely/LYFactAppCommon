@@ -24,9 +24,9 @@
 //	THE SOFTWARE.
 //
 
-#import <QMUIKit/QMUIKit.h>
+#import <UIKit/UIKit.h>
 
 
-@interface FACBaseTabBarVC : QMUITabBarViewController
+@interface FACBaseTabBarVC : UITabBarController
 
 @end

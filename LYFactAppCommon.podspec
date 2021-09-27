@@ -34,10 +34,7 @@ LYFactAppCommon:
   s.frameworks = 'UIKit', 'MapKit', 'WebKit'
   
   s.dependency 'AFNetworking'
-  s.dependency 'LYCategory'
   s.dependency 'FCUUID'
-  s.dependency 'QMUIKit'
-  s.dependency 'Masonry'
-  s.dependency 'LYCore'
+  s.dependency 'LYCategory'
   
 end

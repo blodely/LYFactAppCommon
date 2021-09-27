@@ -25,7 +25,7 @@
 //
 
 #import "FACHomeMenuItemCell.h"
-#import <Masonry/Masonry.h>
+#import <LYFactAppCommon/LYFactAppCommon.h>
 
 
 NSString *const FACHomeMenuItemCellIdentifier = @"FACHomeMenuItemCellIdentifier";
@@ -40,30 +40,30 @@ NSString *const FACHomeMenuItemCellIdentifier = @"FACHomeMenuItemCellIdentifier"
 	
 	{
 		UIImageView *view = [[UIImageView alloc] init];
+        view.translatesAutoresizingMaskIntoConstraints = NO;
 		view.contentMode = UIViewContentModeScaleAspectFit;
 		[self addSubview:view];
 		_ivIcon = view;
 		
-		[view mas_makeConstraints:^(MASConstraintMaker *make) {
-			make.top.equalTo(self).offset(4);
-			make.left.right.equalTo(self);
-			make.height.mas_equalTo(26);
-		}];
+        [view.topAnchor constraintEqualToAnchor:self.topAnchor constant:4].active = YES;
+        [view.leftAnchor constraintEqualToAnchor:self.leftAnchor].active = YES;
+        [view.rightAnchor constraintEqualToAnchor:self.rightAnchor].active = YES;
+        [view.heightAnchor constraintEqualToConstant:26.0].active = YES;
 	}
 	
 	{
 		UILabel *view = [[UILabel alloc] init];
+        view.translatesAutoresizingMaskIntoConstraints = NO;
 		view.textAlignment = NSTextAlignmentCenter;
 		view.font = [UIFont systemFontOfSize:15];
 		[self addSubview:view];
 		_lblTitle = view;
 		
-		[view mas_makeConstraints:^(MASConstraintMaker *make) {
-			make.top.equalTo(self->_ivIcon.mas_bottom).offset(6);
-			make.left.right.equalTo(self);
-			make.height.mas_equalTo(18);
-			make.bottom.equalTo(self).offset(6);
-		}];
+        [view.topAnchor constraintEqualToAnchor:_ivIcon.bottomAnchor constant:6].active = YES;
+        [view.leftAnchor constraintEqualToAnchor:self.leftAnchor].active = YES;
+        [view.rightAnchor constraintEqualToAnchor:self.rightAnchor].active = YES;
+        [view.heightAnchor constraintEqualToConstant:18].active = YES;
+        [view.bottomAnchor constraintEqualToAnchor:self.bottomAnchor constant:-6].active = YES;
 	}
 }
 

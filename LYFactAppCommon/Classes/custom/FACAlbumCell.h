@@ -24,12 +24,12 @@
 //	THE SOFTWARE.
 //
 
-#import <LYCore/LYCore.h>
+#import <LYFactAppCommon/FACBaseCollectionCell.h>
 
 
 FOUNDATION_EXPORT NSString *const FACAlbumCellIdentifier;
 
-@interface FACAlbumCell : LYCollectionCell
+@interface FACAlbumCell : FACBaseCollectionCell
 @property (nonatomic, weak) UIImageView *ivCover;
 @property (nonatomic, weak) UILabel *lblTitle;
 @end

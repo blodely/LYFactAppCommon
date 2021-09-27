@@ -24,12 +24,13 @@
 //	THE SOFTWARE.
 //
 
-#import <LYCore/LYCore.h>
+#import <UIKit/UIKit.h>
+#import <LYFactAppCommon/FACBaseCollectionCell.h>
 
 
 FOUNDATION_EXPORT NSString *const FACHomeMenuItemCellIdentifier;
 
-@interface FACHomeMenuItemCell : LYCollectionCell
+@interface FACHomeMenuItemCell : FACBaseCollectionCell
 
 @property (nonatomic, weak) UILabel *lblTitle;
 @property (nonatomic, weak) UIImageView *ivIcon;

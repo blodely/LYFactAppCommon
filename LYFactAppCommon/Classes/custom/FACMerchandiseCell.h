@@ -24,7 +24,8 @@
 //	THE SOFTWARE.
 //
 
-#import <LYCore/LYCore.h>
+#import <UIKit/UIKit.h>
+#import <LYFactAppCommon/FACBaseCollectionCell.h>
 
 
 FOUNDATION_EXPORT NSString *const FACMerchandiseCellIdentifier;
@@ -38,9 +39,9 @@ FOUNDATION_EXPORT NSString *const FACMerchandiseCellIdentifier;
 
 @end
 
-@interface FACMerchandiseCell : LYCollectionCell {
+@interface FACMerchandiseCell : FACBaseCollectionCell {
 	
-	__weak LYView *vCont;
+	__weak UIView *vCont;
 }
 
 @property (nonatomic, weak) UIImageView *ivPic;

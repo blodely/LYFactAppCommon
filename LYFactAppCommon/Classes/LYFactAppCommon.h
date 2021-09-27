@@ -26,11 +26,13 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import <QMUIKit/QMUIKit.h>
+#import <LYCategory/LYCategory.h>
 
 #import <LYFactAppCommon/FACBaseVC.h>
 #import <LYFactAppCommon/FACBaseNavVC.h>
 #import <LYFactAppCommon/FACBaseTabBarVC.h>
+#import <LYFactAppCommon/FACBaseTableCell.h>
+#import <LYFactAppCommon/FACBaseCollectionCell.h>
 
 #import <LYFactAppCommon/FACLocalContentVC.h>
 

@@ -24,9 +24,14 @@
 //	THE SOFTWARE.
 //
 
-#import <QMUIKit/QMUIKit.h>
+#import <UIKit/UIKit.h>
 
 
-@interface FACBaseVC : QMUICommonViewController
+@interface FACBaseVC : UIViewController
+
+/**
+ called when initial class.
+ */
+- (void)initial;
 
 @end

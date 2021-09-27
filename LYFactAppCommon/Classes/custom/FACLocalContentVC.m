@@ -26,9 +26,8 @@
 
 #import "FACLocalContentVC.h"
 #import <WebKit/WebKit.h>
-#import <LYCore/LYCore.h>
 #import <LYCategory/LYCategory.h>
-#import <Masonry/Masonry.h>
+#import <LYFactAppCommon/LYFactAppCommon.h>
 
 
 @interface FACLocalContentVC () {
@@ -43,9 +42,9 @@
 
 // MARK: - INIT
 
-- (void)didInitialize {
-	[super didInitialize];
-	
+- (void)initial {
+    [super initial];
+    
 	self.hidesBottomBarWhenPushed = YES;
 }
 
@@ -58,12 +57,14 @@
 		WKWebViewConfiguration *webconf = [[WKWebViewConfiguration alloc] init];
 		
 		WKWebView *view = [[WKWebView alloc] initWithFrame:CGRectZero configuration:webconf];
+        view.translatesAutoresizingMaskIntoConstraints = NO;
 		[self.view addSubview:view];
 		web = view;
 		
-		[view mas_makeConstraints:^(MASConstraintMaker *make) {
-			make.edges.equalTo(self.view);
-		}];
+        [view.topAnchor constraintEqualToAnchor:self.view.topAnchor].active = YES;
+        [view.bottomAnchor constraintEqualToAnchor:self.view.bottomAnchor].active = YES;
+        [view.leftAnchor constraintEqualToAnchor:self.view.leftAnchor].active = YES;
+        [view.rightAnchor constraintEqualToAnchor:self.view.rightAnchor].active = YES;
 	}
 }
 

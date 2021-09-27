@@ -25,6 +25,7 @@
 //
 
 #import "FACBaseVC.h"
+#import <LYFactAppCommon/LYFactAppCommon.h>
 
 
 @interface FACBaseVC () {}
@@ -35,6 +36,17 @@
 // MARK: - ACTION
 
 // MARK: - INIT
+
+- (instancetype)init {
+    if (self = [super init]) {
+        [self initial];
+    }
+    return self;
+}
+
+- (void)initial {
+    
+}
 
 // MARK: VIEW LIFE CYCLE
 

@@ -26,6 +26,7 @@
 
 #import "FACMenuItemCell.h"
 #import <LYCategory/LYCategory.h>
+#import <LYFactAppCommon/LYFactAppCommon.h>
 
 
 NSString *const FACMenuItemCellIdentifier = @"FACMenuItemCellIdentifier";

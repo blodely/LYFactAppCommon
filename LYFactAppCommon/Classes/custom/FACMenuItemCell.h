@@ -24,11 +24,12 @@
 //	THE SOFTWARE.
 //
 
-#import <QMUIKit/QMUIKit.h>
+#import <UIKit/UIKit.h>
+#import <LYFactAppCommon/FACBaseTableCell.h>
 
 
 FOUNDATION_EXPORT NSString *const FACMenuItemCellIdentifier;
 
-@interface FACMenuItemCell : QMUITableViewCell
+@interface FACMenuItemCell : UITableViewCell
 
 @end
