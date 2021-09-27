@@ -14,11 +14,11 @@
 		6003F598195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F596195388D20070C39A /* InfoPlist.strings */; };
 		6003F59A195388D20070C39A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F599195388D20070C39A /* main.m */; };
 		6003F59E195388D20070C39A /* LYAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F59D195388D20070C39A /* LYAppDelegate.m */; };
-		6003F5A7195388D20070C39A /* LYViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5A6195388D20070C39A /* LYViewController.m */; };
 		6003F5A9195388D20070C39A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5A8195388D20070C39A /* Images.xcassets */; };
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
-		FCB8AE972701AA4600995B08 /* LYTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB8AE962701AA4600995B08 /* LYTableViewController.m */; };
-		FCB8AE9A2701B01100995B08 /* LYCollectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB8AE992701B01100995B08 /* LYCollectViewController.m */; };
+		FCB8AEA52701E3CC00995B08 /* LYCollectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB8AE9D2701E3CC00995B08 /* LYCollectViewController.m */; };
+		FCB8AEA62701E3CC00995B08 /* LYViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB8AEA12701E3CC00995B08 /* LYViewController.m */; };
+		FCB8AEA72701E3CC00995B08 /* LYTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB8AEA32701E3CC00995B08 /* LYTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,18 +34,18 @@
 		6003F59B195388D20070C39A /* LYFactAppCommon-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LYFactAppCommon-Prefix.pch"; sourceTree = "<group>"; };
 		6003F59C195388D20070C39A /* LYAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYAppDelegate.h; sourceTree = "<group>"; };
 		6003F59D195388D20070C39A /* LYAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYAppDelegate.m; sourceTree = "<group>"; };
-		6003F5A5195388D20070C39A /* LYViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYViewController.h; sourceTree = "<group>"; };
-		6003F5A6195388D20070C39A /* LYViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYViewController.m; sourceTree = "<group>"; };
 		6003F5A8195388D20070C39A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		6418149BA32F211A4097EB3C /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		70B72525A47B7500FDF791BC /* Pods-LYFactAppCommon_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LYFactAppCommon_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LYFactAppCommon_Example/Pods-LYFactAppCommon_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AEBBFCDC2D89CB1920089621 /* LYFactAppCommon.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LYFactAppCommon.podspec; path = ../LYFactAppCommon.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		D6F76956D4513500FB7965B0 /* Pods-LYFactAppCommon_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LYFactAppCommon_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-LYFactAppCommon_Example/Pods-LYFactAppCommon_Example.release.xcconfig"; sourceTree = "<group>"; };
-		FCB8AE952701AA4600995B08 /* LYTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYTableViewController.h; sourceTree = "<group>"; };
-		FCB8AE962701AA4600995B08 /* LYTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYTableViewController.m; sourceTree = "<group>"; };
-		FCB8AE982701B01100995B08 /* LYCollectViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYCollectViewController.h; sourceTree = "<group>"; };
-		FCB8AE992701B01100995B08 /* LYCollectViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYCollectViewController.m; sourceTree = "<group>"; };
+		FCB8AE9D2701E3CC00995B08 /* LYCollectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYCollectViewController.m; sourceTree = "<group>"; };
+		FCB8AE9E2701E3CC00995B08 /* LYCollectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYCollectViewController.h; sourceTree = "<group>"; };
+		FCB8AEA02701E3CC00995B08 /* LYViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYViewController.h; sourceTree = "<group>"; };
+		FCB8AEA12701E3CC00995B08 /* LYViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYViewController.m; sourceTree = "<group>"; };
+		FCB8AEA32701E3CC00995B08 /* LYTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYTableViewController.m; sourceTree = "<group>"; };
+		FCB8AEA42701E3CC00995B08 /* LYTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYTableViewController.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,17 +105,12 @@
 		6003F593195388D20070C39A /* Example for LYFactAppCommon */ = {
 			isa = PBXGroup;
 			children = (
+				FCB8AE9B2701E3CC00995B08 /* _scene */,
+				6003F5A8195388D20070C39A /* Images.xcassets */,
+				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
 				6003F59C195388D20070C39A /* LYAppDelegate.h */,
 				6003F59D195388D20070C39A /* LYAppDelegate.m */,
-				6003F5A5195388D20070C39A /* LYViewController.h */,
-				6003F5A6195388D20070C39A /* LYViewController.m */,
-				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
-				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
-				FCB8AE952701AA4600995B08 /* LYTableViewController.h */,
-				FCB8AE962701AA4600995B08 /* LYTableViewController.m */,
-				FCB8AE982701B01100995B08 /* LYCollectViewController.h */,
-				FCB8AE992701B01100995B08 /* LYCollectViewController.m */,
 			);
 			name = "Example for LYFactAppCommon";
 			path = LYFactAppCommon;
@@ -140,6 +135,43 @@
 				6418149BA32F211A4097EB3C /* LICENSE */,
 			);
 			name = "Podspec Metadata";
+			sourceTree = "<group>";
+		};
+		FCB8AE9B2701E3CC00995B08 /* _scene */ = {
+			isa = PBXGroup;
+			children = (
+				FCB8AE9C2701E3CC00995B08 /* collection */,
+				FCB8AE9F2701E3CC00995B08 /* first */,
+				FCB8AEA22701E3CC00995B08 /* table */,
+			);
+			path = _scene;
+			sourceTree = "<group>";
+		};
+		FCB8AE9C2701E3CC00995B08 /* collection */ = {
+			isa = PBXGroup;
+			children = (
+				FCB8AE9E2701E3CC00995B08 /* LYCollectViewController.h */,
+				FCB8AE9D2701E3CC00995B08 /* LYCollectViewController.m */,
+			);
+			path = collection;
+			sourceTree = "<group>";
+		};
+		FCB8AE9F2701E3CC00995B08 /* first */ = {
+			isa = PBXGroup;
+			children = (
+				FCB8AEA02701E3CC00995B08 /* LYViewController.h */,
+				FCB8AEA12701E3CC00995B08 /* LYViewController.m */,
+			);
+			path = first;
+			sourceTree = "<group>";
+		};
+		FCB8AEA22701E3CC00995B08 /* table */ = {
+			isa = PBXGroup;
+			children = (
+				FCB8AEA42701E3CC00995B08 /* LYTableViewController.h */,
+				FCB8AEA32701E3CC00995B08 /* LYTableViewController.m */,
+			);
+			path = table;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,9 +300,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				6003F59E195388D20070C39A /* LYAppDelegate.m in Sources */,
-				6003F5A7195388D20070C39A /* LYViewController.m in Sources */,
-				FCB8AE9A2701B01100995B08 /* LYCollectViewController.m in Sources */,
-				FCB8AE972701AA4600995B08 /* LYTableViewController.m in Sources */,
+				FCB8AEA62701E3CC00995B08 /* LYViewController.m in Sources */,
+				FCB8AEA52701E3CC00995B08 /* LYCollectViewController.m in Sources */,
+				FCB8AEA72701E3CC00995B08 /* LYTableViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
