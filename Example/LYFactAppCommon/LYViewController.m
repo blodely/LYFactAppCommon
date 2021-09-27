@@ -26,6 +26,8 @@
 
 #import "LYViewController.h"
 #import <LYFactAppCommon/LYFactAppCommon.h>
+#import "LYTableViewController.h"
+#import "LYCollectViewController.h"
 
 
 @interface LYViewController () {}
@@ -33,9 +35,34 @@
 
 @implementation LYViewController
 
+- (void)buttonPressed:(id)sender {
+    [self.navigationController pushViewController:[[LYCollectViewController alloc] init] animated:YES];
+}
+
+- (void)loadView {
+    [super loadView];
+    
+    self.view.backgroundColor = [UIColor lightGrayColor];
+}
+
 - (void)viewDidLoad {
 	[super viewDidLoad];
 	// DO ANY ADDITIONAL SETUP AFTER LOADING THE VIEW, TYPICALLY FROM A NIB.
+    
+    {
+        UIControl *view = [UIControl new];
+        view.backgroundColor = [UIColor grayColor];
+        [self.view addSubview:view];
+        view.translatesAutoresizingMaskIntoConstraints = NO;
+        [view.layer setBorderColor:view.tintColor.CGColor];
+        [view.layer setBorderWidth:1];
+        [view addTarget:self action:@selector(buttonPressed:) forControlEvents:UIControlEventTouchUpInside];
+        
+        [view.leftAnchor constraintEqualToAnchor:self.view.leftAnchor constant:FAC_PADDING].active = YES;
+        [view.rightAnchor constraintEqualToAnchor:self.view.rightAnchor constant:-FAC_PADDING].active = YES;
+        [view.topAnchor constraintEqualToAnchor:self.view.safeAreaLayoutGuide.topAnchor constant:FAC_PADDING].active = YES;
+        [view.bottomAnchor constraintEqualToAnchor:self.view.safeAreaLayoutGuide.bottomAnchor constant:0].active = YES;
+    }
 }
 
 - (void)didReceiveMemoryWarning {
