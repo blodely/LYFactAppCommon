@@ -33,8 +33,8 @@ LYFactAppCommon:
   
   s.frameworks = 'UIKit', 'MapKit', 'WebKit'
   
-  s.dependency 'AFNetworking'
-  s.dependency 'FCUUID'
-  s.dependency 'LYCategory'
+  s.dependency 'AFNetworking', '~> 4.0.1'
+  s.dependency 'FCUUID', '~> 1.3.1'
+  s.dependency 'LYCategory', '~> 1.12.9'
   
 end
