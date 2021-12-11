@@ -37,6 +37,16 @@
 
 // MARK: - INIT
 
+- (instancetype)initWithRootViewController:(UIViewController *)rootViewController {
+	if (self = [super initWithRootViewController:rootViewController]) {
+		[self initial];
+	}
+	return self;
+}
+
+- (void)initial {
+}
+
 // MARK: VIEW LIFE CYCLE
 
 /*

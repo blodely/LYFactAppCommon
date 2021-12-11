@@ -29,4 +29,6 @@
 
 @interface FACBaseNavVC : UINavigationController
 
+- (void)initial;
+
 @end
