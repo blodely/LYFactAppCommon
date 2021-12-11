@@ -35,3 +35,6 @@
 - (void)initial;
 
 @end
+
+@interface FACBaseHideNavbarVC : FACBaseVC
+@end
