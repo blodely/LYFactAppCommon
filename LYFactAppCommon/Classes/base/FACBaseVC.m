@@ -48,6 +48,11 @@
     
 }
 
++ (UINavigationController *)nav {
+	UINavigationController *navc = [[UINavigationController alloc] initWithRootViewController:[[[self class] alloc] init]];
+	return navc;
+}
+
 // MARK: VIEW LIFE CYCLE
 
 - (void)loadView {

@@ -34,6 +34,8 @@
  */
 - (void)initial;
 
++ (UINavigationController *)nav;
+
 @end
 
 @interface FACBaseHideNavbarVC : FACBaseVC
