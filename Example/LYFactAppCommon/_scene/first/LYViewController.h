@@ -25,7 +25,9 @@
 //
 
 @import UIKit;
+@import LYFactAppCommon;
 
-@interface LYViewController : UIViewController
+
+@interface LYViewController : FACBaseVC
 
 @end

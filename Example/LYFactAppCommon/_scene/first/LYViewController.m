@@ -36,13 +36,15 @@
 @implementation LYViewController
 
 - (void)buttonPressed:(id)sender {
-    [self.navigationController pushViewController:[[LYCollectViewController alloc] init] animated:YES];
+	[self pushTo:[[LYCollectViewController alloc] init]];
 }
 
 - (void)loadView {
     [super loadView];
     
     self.view.backgroundColor = [UIColor lightGrayColor];
+	
+	self.navigationItem.title = @"LYFactAppCommon";
 }
 
 - (void)viewDidLoad {
@@ -51,11 +53,12 @@
     
     {
         UIControl *view = [UIControl new];
+		view.translatesAutoresizingMaskIntoConstraints = NO;
+		[view.layer setBorderColor:view.tintColor.CGColor];
+		[view.layer setBorderWidth:1];
         view.backgroundColor = [UIColor grayColor];
         [self.view addSubview:view];
-        view.translatesAutoresizingMaskIntoConstraints = NO;
-        [view.layer setBorderColor:view.tintColor.CGColor];
-        [view.layer setBorderWidth:1];
+        
         [view addTarget:self action:@selector(buttonPressed:) forControlEvents:UIControlEventTouchUpInside];
         
         [view.leftAnchor constraintEqualToAnchor:self.view.leftAnchor constant:FAC_PADDING].active = YES;
