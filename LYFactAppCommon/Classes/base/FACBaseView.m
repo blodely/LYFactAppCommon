@@ -32,13 +32,6 @@
 
 // MARK: - INIT
 
-- (instancetype)init {
-	if (self = [super init]) {
-		[self initial];
-	}
-	return self;
-}
-
 - (instancetype)initWithFrame:(CGRect)frame {
 	if (self = [super initWithFrame:frame]) {
 		[self initial];
