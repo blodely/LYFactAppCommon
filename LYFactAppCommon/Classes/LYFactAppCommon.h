@@ -51,6 +51,8 @@
 
 FOUNDATION_EXPORT CGFloat const FAC_PADDING;
 
+FOUNDATION_EXPORT CGFloat const FAC_CTL_SIDE;
+FOUNDATION_EXPORT CGFloat const FAC_CTL_SMALL;
 
 @interface LYFactAppCommon : NSObject
 

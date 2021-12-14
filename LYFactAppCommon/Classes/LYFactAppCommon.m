@@ -29,6 +29,9 @@
 
 CGFloat const FAC_PADDING = 15.0f;
 
+CGFloat const FAC_CTL_SIDE = 44.0f;
+CGFloat const FAC_CTL_SMALL = 36.0f;
+
 
 @implementation LYFactAppCommon
 
