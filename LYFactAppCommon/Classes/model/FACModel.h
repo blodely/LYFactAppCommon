@@ -1,9 +1,9 @@
 //
-//  LYFactAppCommon.h
+//	FACModel.h
 //	LYFactAppCommon
 //
-//	CREATED BY LUO YU ON 2019-02-01.
-//	Copyright (c) 2019 骆昱 (Luo Yu, blodely) <indie.luo@gmail.com>
+//	CREATED BY LUO YU ON 2021-12-14.
+//	Copyright (c) 2019~2021 骆昱 (Luo Yu, blodely) <indie.luo@gmail.com>
 //
 //	Permission is hereby granted, free of charge, to any person obtaining a copy
 //	of this software and associated documentation files (the "Software"), to deal
@@ -25,33 +25,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <UIKit/UIKit.h>
-#import <LYCategory/LYCategory.h>
-
-#import <LYFactAppCommon/FACBaseVC.h>
-#import <LYFactAppCommon/FACBaseNavVC.h>
-#import <LYFactAppCommon/FACBaseTabBarVC.h>
-#import <LYFactAppCommon/FACBaseTableCell.h>
-#import <LYFactAppCommon/FACBaseCollectionCell.h>
-
-#import <LYFactAppCommon/FACLocalContentVC.h>
-
-#import <LYFactAppCommon/FACBaseView.h>
-#import <LYFactAppCommon/FACBaseControl.h>
-
-#import <LYFactAppCommon/FACBannerCell.h>
-#import <LYFactAppCommon/FACMenuItemCell.h>
-#import <LYFactAppCommon/FACNewsItemCell.h>
-#import <LYFactAppCommon/FACMerchandiseCell.h>
-#import <LYFactAppCommon/FACAlbumCell.h>
-#import <LYFactAppCommon/FACHomeMenuItemCell.h>
-
-#import <LYFactAppCommon/FACModel.h>
 
 
-FOUNDATION_EXPORT CGFloat const FAC_PADDING;
-
-
-@interface LYFactAppCommon : NSObject
+@interface FACModel : NSObject <NSCoding, NSCopying>
 
 @end
