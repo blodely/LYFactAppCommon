@@ -35,6 +35,7 @@
 #import <LYFactAppCommon/FACBaseCollectionCell.h>
 
 #import <LYFactAppCommon/FACLocalContentVC.h>
+#import <LYFactAppCommon/FACWebVC.h>
 
 #import <LYFactAppCommon/FACBaseView.h>
 #import <LYFactAppCommon/FACBaseControl.h>
