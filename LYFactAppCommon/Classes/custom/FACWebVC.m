@@ -33,12 +33,21 @@
 
 @implementation FACWebVC
 
+// MARK: - INIT
+
 - (void)initial {
 	[super initial];
 	
+	wkConfig = [[WKWebViewConfiguration alloc] init];
+}
+
+// MARK: - VIEW LIFE CYCLE
+
+- (void)loadView {
+	[super loadView];
+	
 	{
-		WKWebViewConfiguration *config = [[WKWebViewConfiguration alloc] init];
-		WKWebView *view = [[WKWebView alloc] initWithFrame:CGRectZero configuration:config];
+		WKWebView *view = [[WKWebView alloc] initWithFrame:CGRectZero configuration:wkConfig];
 		view.translatesAutoresizingMaskIntoConstraints = NO;
 		[self.view addSubview:view];
 		wkWeb = view;
@@ -49,5 +58,23 @@
 		[view.bottomAnchor constraintEqualToAnchor:self.view.bottomAnchor].active = YES;
 	}
 }
+
+// MARK: - METHOD
+// MARK: PRIVATE METHOD
+// MARK: PROPERTY
+
+- (void)setURLString:(NSString *)URLString {
+	if (URLString == nil || [URLString isEmpty]) {
+		_URLString = nil;
+	} else {
+		_URLString = URLString;
+	}
+}
+
+// MARK: BLOCK
+// MARK: - DELEGATE
+// MARK:
+// MARK: - NOTIFICATION
+// MARK:
 
 @end

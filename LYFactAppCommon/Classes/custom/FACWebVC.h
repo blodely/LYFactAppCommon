@@ -30,6 +30,9 @@
 
 @interface FACWebVC : FACBaseVC {
 	__weak WKWebView *wkWeb;
+	__strong WKWebViewConfiguration *wkConfig;
 }
+
+@property (nonatomic, copy) NSString *URLString;
 
 @end
