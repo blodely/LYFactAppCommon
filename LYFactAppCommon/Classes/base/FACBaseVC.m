@@ -89,12 +89,22 @@
 
 @end
 
-// MARK: -
+// MARK: - FACBaseHideNavbarVC
 @implementation FACBaseHideNavbarVC
 
 - (void)viewWillAppear:(BOOL)animated {
 	[super viewWillAppear:animated];
 	[self.navigationController setNavigationBarHidden:YES animated:animated];
+}
+
+@end
+
+// MARK: - FACBaseShowNavbarVC
+@implementation FACBaseShowNavbarVC
+
+- (void)viewWillAppear:(BOOL)animated {
+	[super viewWillAppear:animated];
+	[self.navigationController setNavigationBarHidden:NO animated:animated];
 }
 
 @end

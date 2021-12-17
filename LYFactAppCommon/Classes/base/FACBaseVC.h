@@ -38,5 +38,10 @@
 
 @end
 
+// MARK: - FACBaseHideNavbarVC
 @interface FACBaseHideNavbarVC : FACBaseVC
+@end
+
+// MARK: - FACBaseShowNavbarVC
+@interface FACBaseShowNavbarVC : FACBaseVC
 @end
