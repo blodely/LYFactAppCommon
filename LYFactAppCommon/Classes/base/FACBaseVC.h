@@ -27,7 +27,9 @@
 #import <UIKit/UIKit.h>
 
 
-@interface FACBaseVC : UIViewController
+@interface FACBaseVC : UIViewController {
+	BOOL lightStatusbar;
+}
 
 /**
  called when initial class.
@@ -35,6 +37,11 @@
 - (void)initial;
 
 + (UINavigationController *)nav;
+
+/// Update statusbar style
+/// View controller-based status bar appearance = YES
+/// @param lightStyle is statusbar style light or not
+- (void)updateStatusbarLight:(BOOL)lightStyle;
 
 @end
 

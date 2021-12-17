@@ -66,6 +66,10 @@
 	// DO ANY ADDITIONAL SETUP AFTER LOADING THE VIEW.
 }
 
+- (UIStatusBarStyle)preferredStatusBarStyle {
+	return lightStatusbar ? UIStatusBarStyleLightContent : UIStatusBarStyleDefault;
+}
+
 // MARK: MEMORY MANAGEMENT
 
 /*
@@ -74,6 +78,11 @@
 */
 
 // MARK: - METHOD
+
+- (void)updateStatusbarLight:(BOOL)lightStyle {
+	lightStatusbar = lightStyle;
+	[self setNeedsStatusBarAppearanceUpdate];
+}
 
 // MARK: PRIVATE METHOD
 
