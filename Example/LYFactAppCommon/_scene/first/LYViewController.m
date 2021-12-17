@@ -39,12 +39,19 @@
 	[self pushTo:[[LYCollectViewController alloc] init]];
 }
 
+- (void)initial {
+	[super initial];
+	
+	lightStatusbar = YES;
+}
+
 - (void)loadView {
     [super loadView];
     
     self.view.backgroundColor = [UIColor lightGrayColor];
 	
 	self.navigationItem.title = @"LYFactAppCommon";
+	[self updateStatusbarLight:YES];
 }
 
 - (void)viewDidLoad {
@@ -66,11 +73,6 @@
         [view.topAnchor constraintEqualToAnchor:self.view.safeAreaLayoutGuide.topAnchor constant:FAC_PADDING].active = YES;
         [view.bottomAnchor constraintEqualToAnchor:self.view.safeAreaLayoutGuide.bottomAnchor constant:0].active = YES;
     }
-}
-
-- (void)didReceiveMemoryWarning {
-	[super didReceiveMemoryWarning];
-	// DISPOSE OF ANY RESOURCES THAT CAN BE RECREATED.
 }
 
 @end
