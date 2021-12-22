@@ -23,7 +23,7 @@ LYFactAppCommon:
 
   s.ios.deployment_target = '11.0'
 
-  s.source_files = 'LYFactAppCommon/Classes/base/*', 'LYFactAppCommon/Classes/custom/*', 'LYFactAppCommon/Classes/**/*'
+  s.source_files = 'LYFactAppCommon/Classes/**/*'
   
   # s.resource_bundles = {
   #   'LYFactAppCommon' => ['LYFactAppCommon/Assets/*.png']
@@ -36,5 +36,7 @@ LYFactAppCommon:
   s.dependency 'AFNetworking', '~> 4.0.1'
   s.dependency 'FCUUID', '~> 1.3.1'
   s.dependency 'LYCategory', '~> 1.13'
+  
+  s.dependency 'JLRoutes'
   
 end
