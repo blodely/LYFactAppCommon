@@ -26,6 +26,7 @@
 
 #import "LYAppDelegate.h"
 #import "LYViewController.h"
+#import "MainViewController.h"
 
 
 @implementation LYAppDelegate
@@ -34,7 +35,7 @@
 	// OVERRIDE POINT FOR CUSTOMIZATION AFTER APPLICATION LAUNCH.
 	
 	_window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-	_window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[[LYViewController alloc] init]];
+	_window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[[MainViewController alloc] init]];
 	[_window makeKeyAndVisible];
 	
     return YES;

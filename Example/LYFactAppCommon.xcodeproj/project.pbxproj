@@ -16,6 +16,12 @@
 		6003F59E195388D20070C39A /* LYAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F59D195388D20070C39A /* LYAppDelegate.m */; };
 		6003F5A9195388D20070C39A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5A8195388D20070C39A /* Images.xcassets */; };
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
+		89A25D972775631100151446 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89A25D952775631100151446 /* MainViewController.m */; };
+		89A25D982775631100151446 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89A25D962775631100151446 /* MainViewController.xib */; };
+		89A25D9C2775681900151446 /* LightShowNavVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 89A25D9B2775681900151446 /* LightShowNavVC.m */; };
+		89A25D9F2775683900151446 /* LightHiddenVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 89A25D9E2775683900151446 /* LightHiddenVC.m */; };
+		89A25DA22775686000151446 /* DarkHiddenVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 89A25DA12775686000151446 /* DarkHiddenVC.m */; };
+		89A25DA52775687700151446 /* DarkShowNavVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 89A25DA42775687700151446 /* DarkShowNavVC.m */; };
 		FCB8AEA52701E3CC00995B08 /* LYCollectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB8AE9D2701E3CC00995B08 /* LYCollectViewController.m */; };
 		FCB8AEA62701E3CC00995B08 /* LYViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB8AEA12701E3CC00995B08 /* LYViewController.m */; };
 		FCB8AEA72701E3CC00995B08 /* LYTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB8AEA32701E3CC00995B08 /* LYTableViewController.m */; };
@@ -38,6 +44,17 @@
 		6418149BA32F211A4097EB3C /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		70B72525A47B7500FDF791BC /* Pods-LYFactAppCommon_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LYFactAppCommon_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LYFactAppCommon_Example/Pods-LYFactAppCommon_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		89A25D942775631100151446 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		89A25D952775631100151446 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		89A25D962775631100151446 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		89A25D9A2775681900151446 /* LightShowNavVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LightShowNavVC.h; sourceTree = "<group>"; };
+		89A25D9B2775681900151446 /* LightShowNavVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LightShowNavVC.m; sourceTree = "<group>"; };
+		89A25D9D2775683900151446 /* LightHiddenVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LightHiddenVC.h; sourceTree = "<group>"; };
+		89A25D9E2775683900151446 /* LightHiddenVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LightHiddenVC.m; sourceTree = "<group>"; };
+		89A25DA02775686000151446 /* DarkHiddenVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DarkHiddenVC.h; sourceTree = "<group>"; };
+		89A25DA12775686000151446 /* DarkHiddenVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DarkHiddenVC.m; sourceTree = "<group>"; };
+		89A25DA32775687700151446 /* DarkShowNavVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DarkShowNavVC.h; sourceTree = "<group>"; };
+		89A25DA42775687700151446 /* DarkShowNavVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DarkShowNavVC.m; sourceTree = "<group>"; };
 		AEBBFCDC2D89CB1920089621 /* LYFactAppCommon.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LYFactAppCommon.podspec; path = ../LYFactAppCommon.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		D6F76956D4513500FB7965B0 /* Pods-LYFactAppCommon_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LYFactAppCommon_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-LYFactAppCommon_Example/Pods-LYFactAppCommon_Example.release.xcconfig"; sourceTree = "<group>"; };
 		FCB8AE9D2701E3CC00995B08 /* LYCollectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYCollectViewController.m; sourceTree = "<group>"; };
@@ -137,11 +154,27 @@
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
+		89A25D992775680000151446 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				89A25D9A2775681900151446 /* LightShowNavVC.h */,
+				89A25D9B2775681900151446 /* LightShowNavVC.m */,
+				89A25D9D2775683900151446 /* LightHiddenVC.h */,
+				89A25D9E2775683900151446 /* LightHiddenVC.m */,
+				89A25DA02775686000151446 /* DarkHiddenVC.h */,
+				89A25DA12775686000151446 /* DarkHiddenVC.m */,
+				89A25DA32775687700151446 /* DarkShowNavVC.h */,
+				89A25DA42775687700151446 /* DarkShowNavVC.m */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
 		FCB8AE9B2701E3CC00995B08 /* _scene */ = {
 			isa = PBXGroup;
 			children = (
 				FCB8AE9C2701E3CC00995B08 /* collection */,
 				FCB8AE9F2701E3CC00995B08 /* first */,
+				89A25D992775680000151446 /* views */,
 				FCB8AEA22701E3CC00995B08 /* table */,
 			);
 			path = _scene;
@@ -161,6 +194,9 @@
 			children = (
 				FCB8AEA02701E3CC00995B08 /* LYViewController.h */,
 				FCB8AEA12701E3CC00995B08 /* LYViewController.m */,
+				89A25D942775631100151446 /* MainViewController.h */,
+				89A25D952775631100151446 /* MainViewController.m */,
+				89A25D962775631100151446 /* MainViewController.xib */,
 			);
 			path = first;
 			sourceTree = "<group>";
@@ -238,6 +274,7 @@
 				71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
+				89A25D982775631100151446 /* MainViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,10 +339,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				6003F59E195388D20070C39A /* LYAppDelegate.m in Sources */,
+				89A25D972775631100151446 /* MainViewController.m in Sources */,
 				FCB8AEA62701E3CC00995B08 /* LYViewController.m in Sources */,
+				89A25D9C2775681900151446 /* LightShowNavVC.m in Sources */,
 				FCB8AEA52701E3CC00995B08 /* LYCollectViewController.m in Sources */,
 				FCB8AEA72701E3CC00995B08 /* LYTableViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
+				89A25DA52775687700151446 /* DarkShowNavVC.m in Sources */,
+				89A25DA22775686000151446 /* DarkHiddenVC.m in Sources */,
+				89A25D9F2775683900151446 /* LightHiddenVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
