@@ -4,7 +4,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'LYFactAppCommon'
-  s.version          = '1.0.0'
+  s.version          = '1.0.1'
   s.summary          = 'LYFactAppCommon.'
 
   s.description      = <<-DESC
@@ -35,7 +35,7 @@ LYFactAppCommon:
   
   s.dependency 'AFNetworking', '~> 4.0.1'
   s.dependency 'FCUUID', '~> 1.3.1'
-  s.dependency 'LYCategory', '~> 1.13'
+  s.dependency 'LYCategory', '~> 1.13.5'
   
   s.dependency 'JLRoutes'
   
