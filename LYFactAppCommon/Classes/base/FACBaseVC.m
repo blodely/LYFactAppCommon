@@ -45,7 +45,6 @@
 }
 
 - (void)initial {
-    
 }
 
 + (UINavigationController *)nav {
@@ -59,13 +58,6 @@
 	[super loadView];
 	
 	self.view.backgroundColor = [UIColor whiteColor];
-}
-
-- (void)viewDidLoad {
-	[super viewDidLoad];
-	// DO ANY ADDITIONAL SETUP AFTER LOADING THE VIEW.
-	
-	[self setNeedsStatusBarAppearanceUpdate];
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle {
@@ -106,6 +98,7 @@
 - (void)viewWillAppear:(BOOL)animated {
 	[super viewWillAppear:animated];
 	[self.navigationController setNavigationBarHidden:YES animated:animated];
+	[self setNeedsStatusBarAppearanceUpdate];
 }
 
 @end
@@ -116,6 +109,7 @@
 - (void)viewWillAppear:(BOOL)animated {
 	[super viewWillAppear:animated];
 	[self.navigationController setNavigationBarHidden:NO animated:animated];
+	[self setNeedsStatusBarAppearanceUpdate];
 }
 
 @end
