@@ -74,6 +74,11 @@
 
 // MARK: - METHOD
 
+- (void)updateStatusbarLight:(BOOL)lightStyle {
+	lightStatusbar = lightStyle;
+	[self setNeedsStatusBarAppearanceUpdate];
+}
+
 // MARK: PRIVATE METHOD
 
 // MARK: PROPERTY

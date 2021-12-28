@@ -31,6 +31,9 @@
 	BOOL lightStatusbar;
 }
 
+/// initial enter
 - (void)initial;
+
+- (void)updateStatusbarLight:(BOOL)lightStyle;
 
 @end
