@@ -27,7 +27,9 @@
 #import <UIKit/UIKit.h>
 
 
-@interface FACBaseNavVC : UINavigationController
+@interface FACBaseNavVC : UINavigationController {
+	BOOL lightStatusbar;
+}
 
 - (void)initial;
 

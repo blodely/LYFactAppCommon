@@ -56,6 +56,15 @@
 }
 */
 
+- (void)viewWillAppear:(BOOL)animated {
+	[super viewWillAppear:animated];
+	[self setNeedsStatusBarAppearanceUpdate];
+}
+
+- (UIStatusBarStyle)preferredStatusBarStyle {
+	return lightStatusbar ? UIStatusBarStyleLightContent : UIStatusBarStyleDefault;
+}
+
 // MARK: MEMORY MANAGEMENT
 
 /*
