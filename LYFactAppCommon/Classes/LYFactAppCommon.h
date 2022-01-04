@@ -48,6 +48,8 @@
 #import <LYFactAppCommon/FACAlbumCell.h>
 #import <LYFactAppCommon/FACHomeMenuItemCell.h>
 
+#import <LYFactAppCommon/UINavigationController+FAC.h>
+
 #import <LYFactAppCommon/FACModel.h>
 
 
