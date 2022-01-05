@@ -48,7 +48,7 @@
 }
 
 + (UINavigationController *)nav {
-	UINavigationController *navc = [[UINavigationController alloc] initWithRootViewController:[[[self class] alloc] init]];
+	FACBaseNavVC *navc = [[FACBaseNavVC alloc] initWithRootViewController:[[[self class] alloc] init]];
 	return navc;
 }
 

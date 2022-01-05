@@ -25,6 +25,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <LYFactAppCommon/FACBaseNavVC.h>
 
 
 @interface FACBaseVC : UIViewController {

@@ -31,6 +31,7 @@
 @implementation UINavigationController (FAC)
 
 - (void)setTabBarItemTitle:(NSString *)title andImageNamed:(NSString *)iconName selectedImageNamed:(NSString *)iconSelected {
+	[self setTabBarItemTitle:title image:[UIImage imageNamed:iconName] selectedImage:[UIImage imageNamed:iconSelected]];
 }
 
 @end
