@@ -29,6 +29,10 @@
 
 @interface FACBaseView : UIView
 
+/// debug mode
+@property (nonatomic, assign) BOOL debug;
+
+/// after initial will call this method.
 - (void)initial;
 
 @end

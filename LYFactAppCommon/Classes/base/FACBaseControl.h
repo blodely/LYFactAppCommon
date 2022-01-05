@@ -29,6 +29,9 @@
 
 @interface FACBaseControl : UIControl
 
+/// debug mode
+@property (nonatomic, assign) BOOL debug;
+
 - (void)initial;
 
 @end

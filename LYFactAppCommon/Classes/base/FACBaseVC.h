@@ -32,6 +32,9 @@
 	BOOL lightStatusbar;
 }
 
+/// debug mode
+@property (nonatomic, assign) BOOL debug;
+
 /**
  called when initial class.
  */

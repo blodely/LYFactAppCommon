@@ -49,4 +49,18 @@
 - (void)initial {
 }
 
+// MARK: - METHOD
+
+// MARK: PROPERTY
+
+- (void)setDebug:(BOOL)debug {
+	_debug = debug;
+	
+	if (_debug) {
+		[self border1Px];
+	} else {
+		[self removeBorder];
+	}
+}
+
 @end
