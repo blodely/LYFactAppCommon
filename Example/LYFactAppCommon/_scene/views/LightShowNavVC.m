@@ -42,6 +42,7 @@
 	[super loadView];
 	
 	{
+		// MARK: INTERACTION DISABLED VIEW
 		FACNoInteractView *view = [[FACNoInteractView alloc] init];
 		view.translatesAutoresizingMaskIntoConstraints = NO;
 		[view border1Px];
@@ -50,6 +51,25 @@
 		[view.leftAnchor constraintEqualToAnchor:self.view.leftAnchor constant:FAC_PADDING].active = YES;
 		[view.topAnchor constraintEqualToAnchor:self.view.safeAreaLayoutGuide.topAnchor constant:FAC_PADDING * 6].active = YES;
 		[view.widthAnchor constraintEqualToConstant:FAC_CTL_SIDE].active = YES;
+		[view.heightAnchor constraintEqualToConstant:FAC_CTL_SIDE].active = YES;
+	}
+	
+	{
+		// MARK: GRADIENT VIEW
+		FACGradientView *view = [[FACGradientView alloc] init];
+		view.translatesAutoresizingMaskIntoConstraints = NO;
+		
+		view.colors = @[
+			[UIColor colorWithHex:@"#f0b6f2" andAlpha:1],
+			[UIColor colorWithHex:@"#b6c4f2" andAlpha:1],
+		];
+		
+		[view border1Px];
+		[self.view addSubview:view];
+		
+		[view.leftAnchor constraintEqualToAnchor:self.view.leftAnchor constant:FAC_PADDING].active = YES;
+		[view.topAnchor constraintEqualToAnchor:self.view.safeAreaLayoutGuide.topAnchor constant:FAC_PADDING * 9].active = YES;
+		[view.widthAnchor constraintEqualToConstant:FAC_CTL_SIDE * 2].active = YES;
 		[view.heightAnchor constraintEqualToConstant:FAC_CTL_SIDE].active = YES;
 	}
 }
