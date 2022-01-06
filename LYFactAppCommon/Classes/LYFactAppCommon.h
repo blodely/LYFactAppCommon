@@ -43,6 +43,7 @@
 
 #import <LYFactAppCommon/FACNoInteractView.h>
 #import <LYFactAppCommon/FACGradientView.h>
+#import <LYFactAppCommon/FACGradientControl.h>
 
 #import <LYFactAppCommon/FACBannerCell.h>
 #import <LYFactAppCommon/FACMenuItemCell.h>

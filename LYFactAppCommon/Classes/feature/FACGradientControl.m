@@ -1,5 +1,5 @@
 //
-//  FACGradientView.m
+//  FACGradientControl.m
 //	LYFactAppCommon
 //
 //	CREATED BY LUO YU ON 2022-01-06.
@@ -24,11 +24,11 @@
 //	THE SOFTWARE.
 //
 
-#import "FACGradientView.h"
+#import "FACGradientControl.h"
 #import <LYCategory/LYCategory.h>
 
 
-@implementation FACGradientView
+@implementation FACGradientControl
 
 // MARK: - INIT
 
