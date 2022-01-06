@@ -1,5 +1,5 @@
 //
-//	FACBaseNoInteractView.m
+//	FACNoInteractView.h
 //	LYFactAppCommon
 //
 //	CREATED BY LUO YU ON 2022-01-06.
@@ -24,55 +24,15 @@
 //	THE SOFTWARE.
 //
 
-#import "FACBaseNoInteractView.h"
-#import <LYCategory/LYCategory.h>
+#import <UIKit/UIKit.h>
 
 
-@implementation FACBaseNoInteractView
+@interface FACNoInteractView : UIView
 
-// MARK: - INIT
+/// debug mode
+@property (nonatomic, assign) BOOL debug;
 
-- (instancetype)initWithFrame:(CGRect)frame {
-	if (self = [super initWithFrame:frame]) {
-		self.userInteractionEnabled = NO;
-		[self initial];
-	}
-	return self;
-}
-
-- (instancetype)initWithCoder:(NSCoder *)coder {
-	if (self = [super initWithCoder:coder]) {
-		self.userInteractionEnabled = NO;
-		[self initial];
-	}
-	return self;
-}
-
-- (void)initial {
-}
-
-// MARK: - METHOD
-
-// MARK: PROPERTY
-
-- (void)setDebug:(BOOL)debug {
-	_debug = debug;
-	
-	if (_debug) {
-		[self border1Px];
-	} else {
-		[self removeBorder];
-	}
-	
-	for (id one in self.subviews) {
-		if ([one isKindOfClass:[UIView class]] && [one respondsToSelector:@selector(setDebug:)]) {
-			[one setDebug:_debug];
-		}
-	}
-}
-
-- (void)setUserInteractionEnabled:(BOOL)userInteractionEnabled {
-	[super setUserInteractionEnabled:NO];
-}
+/// after initial will call this method.
+- (void)initial;
 
 @end
