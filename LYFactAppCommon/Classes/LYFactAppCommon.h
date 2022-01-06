@@ -40,6 +40,7 @@
 
 #import <LYFactAppCommon/FACBaseView.h>
 #import <LYFactAppCommon/FACBaseControl.h>
+#import <LYFactAppCommon/FACBaseNoInteractView.h>
 
 #import <LYFactAppCommon/FACBannerCell.h>
 #import <LYFactAppCommon/FACMenuItemCell.h>
