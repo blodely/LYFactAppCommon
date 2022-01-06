@@ -38,4 +38,20 @@
 	lightStatusbar = YES;
 }
 
+- (void)loadView {
+	[super loadView];
+	
+	{
+		FACNoInteractView *view = [[FACNoInteractView alloc] init];
+		view.translatesAutoresizingMaskIntoConstraints = NO;
+		[view border1Px];
+		[self.view addSubview:view];
+		
+		[view.leftAnchor constraintEqualToAnchor:self.view.leftAnchor constant:FAC_PADDING].active = YES;
+		[view.topAnchor constraintEqualToAnchor:self.view.safeAreaLayoutGuide.topAnchor constant:FAC_PADDING * 6].active = YES;
+		[view.widthAnchor constraintEqualToConstant:FAC_CTL_SIDE].active = YES;
+		[view.heightAnchor constraintEqualToConstant:FAC_CTL_SIDE].active = YES;
+	}
+}
+
 @end
