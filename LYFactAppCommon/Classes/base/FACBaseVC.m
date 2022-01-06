@@ -82,6 +82,16 @@
 
 // MARK: PROPERTY
 
+- (void)setDebug:(BOOL)debug {
+	_debug = debug;
+	
+	for (id one in self.view.subviews) {
+		if ([one isKindOfClass:[UIView class]] && [one respondsToSelector:@selector(setDebug:)]) {
+			[one setDebug:debug];
+		}
+	}
+}
+
 // MARK: BLOCK
 
 // MARK: - DELEGATE

@@ -61,6 +61,12 @@
 	} else {
 		[self removeBorder];
 	}
+	
+	for (id one in self.subviews) {
+		if ([one isKindOfClass:[UIView class]] && [one respondsToSelector:@selector(setDebug:)]) {
+			[one setDebug:_debug];
+		}
+	}
 }
 
 @end
