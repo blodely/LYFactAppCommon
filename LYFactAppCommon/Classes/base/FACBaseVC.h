@@ -40,7 +40,7 @@
  */
 - (void)initial;
 
-+ (UINavigationController *)nav;
++ (__kindof UINavigationController *)nav;
 
 /// Update statusbar style
 /// View controller-based status bar appearance = YES

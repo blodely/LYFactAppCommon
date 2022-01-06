@@ -47,7 +47,7 @@
 - (void)initial {
 }
 
-+ (UINavigationController *)nav {
++ (__kindof UINavigationController *)nav {
 	FACBaseNavVC *navc = [[FACBaseNavVC alloc] initWithRootViewController:[[[self class] alloc] init]];
 	return navc;
 }
