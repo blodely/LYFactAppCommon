@@ -41,8 +41,14 @@ NSString *const FACBaseCollectionCellIdentifier = @"FACBaseCollectionCellIdentif
     return self;
 }
 
+- (instancetype)initWithCoder:(NSCoder *)coder {
+	if (self = [super initWithCoder:coder]) {
+		[self initial];
+	}
+	return self;
+}
+
 - (void)initial {
-    
 }
 
 @end
