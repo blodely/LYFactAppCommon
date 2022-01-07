@@ -49,6 +49,7 @@ NSString *const FACBaseTableCellIdentifier = @"FACBaseTableCellIdentifier";
 - (void)awakeFromNib {
     [super awakeFromNib];
     // INITIALIZATION CODE
+	[self initial];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
