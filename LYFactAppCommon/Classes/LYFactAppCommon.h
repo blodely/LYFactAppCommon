@@ -31,6 +31,7 @@
 
 #import <LYFactAppCommon/FACBaseVC.h>
 #import <LYFactAppCommon/FACBaseHideNavbarVC.h>
+#import <LYFactAppCommon/FACBaseShowNavbarVC.h>
 #import <LYFactAppCommon/FACBaseNavVC.h>
 #import <LYFactAppCommon/FACBaseTabBarVC.h>
 #import <LYFactAppCommon/FACBaseTableCell.h>

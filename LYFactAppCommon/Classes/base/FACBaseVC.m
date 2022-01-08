@@ -101,15 +101,3 @@
 // MARK: - NOTIFICATION
 
 @end
-
-
-// MARK: - FACBaseShowNavbarVC
-@implementation FACBaseShowNavbarVC
-
-- (void)viewWillAppear:(BOOL)animated {
-	[super viewWillAppear:animated];
-	[self.navigationController setNavigationBarHidden:NO animated:animated];
-	[self setNeedsStatusBarAppearanceUpdate];
-}
-
-@end

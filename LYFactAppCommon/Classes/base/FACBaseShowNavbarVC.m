@@ -1,9 +1,9 @@
 //
-//  FACBaseVC.h
+//	FACBaseShowNavbarVC.m
 //	LYFactAppCommon
 //
-//	CREATED BY LUO YU ON 2019-02-01.
-//	Copyright (c) 2019 骆昱 (Luo Yu, blodely) <indie.luo@gmail.com>
+//	CREATED BY LUO YU ON 2022-01-08.
+//	Copyright (c) 2019~2022 骆昱 (Luo Yu, blodely) <indie.luo@gmail.com>
 //
 //	Permission is hereby granted, free of charge, to any person obtaining a copy
 //	of this software and associated documentation files (the "Software"), to deal
@@ -24,27 +24,18 @@
 //	THE SOFTWARE.
 //
 
-#import <UIKit/UIKit.h>
-#import <LYFactAppCommon/FACBaseNavVC.h>
+#import "FACBaseShowNavbarVC.h"
 
 
-@interface FACBaseVC : UIViewController {
-	BOOL lightStatusbar;
+@interface FACBaseShowNavbarVC () {}
+@end
+
+@implementation FACBaseShowNavbarVC
+
+- (void)viewWillAppear:(BOOL)animated {
+	[super viewWillAppear:animated];
+	[self.navigationController setNavigationBarHidden:NO animated:animated];
+	[self setNeedsStatusBarAppearanceUpdate];
 }
-
-/// debug mode
-@property (nonatomic, assign) BOOL debug;
-
-/**
- called when initial class.
- */
-- (void)initial;
-
-+ (__kindof UINavigationController *)nav;
-
-/// Update statusbar style
-/// View controller-based status bar appearance = YES
-/// @param lightStyle is statusbar style light or not
-- (void)updateStatusbarLight:(BOOL)lightStyle;
 
 @end
