@@ -30,6 +30,7 @@
 #import <JLRoutes/JLRoutes.h>
 
 #import <LYFactAppCommon/FACBaseVC.h>
+#import <LYFactAppCommon/FACBaseHideNavbarVC.h>
 #import <LYFactAppCommon/FACBaseNavVC.h>
 #import <LYFactAppCommon/FACBaseTabBarVC.h>
 #import <LYFactAppCommon/FACBaseTableCell.h>
