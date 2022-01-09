@@ -54,6 +54,10 @@
 	[self pushTo:[[DarkShowNavVC alloc] init]];
 }
 
+- (IBAction)showPopBaseViewButtonPressed:(id)sender {
+	[[FACPopBaseView pop] show];
+}
+
 // MARK: - INIT
 
 - (instancetype)init {
@@ -61,6 +65,26 @@
 		[self initial];
 	}
 	return self;
+}
+
+// MARK: - VIEW LIFE CYCLE
+
+- (void)loadView {
+	[super loadView];
+	
+	{
+		// DRAW BUTTON OUTLINE
+		for (id one in self.view.subviews) {
+			if ([one isKindOfClass:[UIButton class]]) {
+				[one roundedCornerRadius:4];
+				[one border1Px];
+			}
+		}
+	}
+}
+
+- (void)viewDidLoad {
+	[super viewDidLoad];
 }
 
 @end

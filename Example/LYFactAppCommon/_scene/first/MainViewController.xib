@@ -63,15 +63,28 @@
                         <action selector="openDarkShowNavbarButtonPressed:" destination="-1" eventType="touchUpInside" id="eCk-kE-fN0"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wMA-ih-Voj">
+                    <rect key="frame" x="20" y="264" width="374" height="36"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="36" id="mOs-ua-00Z"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="show a pop base view"/>
+                    <connections>
+                        <action selector="showPopBaseViewButtonPressed:" destination="-1" eventType="touchUpInside" id="4BI-nh-ZJA"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="Xe6-z8-DiJ" secondAttribute="trailing" constant="20" id="J0o-oN-e72"/>
                 <constraint firstItem="8Vm-ze-Hr5" firstAttribute="top" secondItem="q98-Ro-9tf" secondAttribute="bottom" constant="8" symbolic="YES" id="JDW-LN-HWn"/>
+                <constraint firstItem="wMA-ih-Voj" firstAttribute="top" secondItem="Xe6-z8-DiJ" secondAttribute="bottom" constant="8" symbolic="YES" id="Jel-sp-33m"/>
                 <constraint firstItem="Abu-hu-2ff" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="20" id="LYo-LX-dhE"/>
                 <constraint firstItem="q98-Ro-9tf" firstAttribute="top" secondItem="Abu-hu-2ff" secondAttribute="bottom" constant="8" symbolic="YES" id="MV1-tO-0rv"/>
                 <constraint firstItem="Xe6-z8-DiJ" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="20" id="PA1-97-Vl4"/>
+                <constraint firstItem="wMA-ih-Voj" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="20" id="RY2-nd-6ZQ"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="Abu-hu-2ff" secondAttribute="trailing" constant="20" id="aM0-hj-mFM"/>
                 <constraint firstItem="q98-Ro-9tf" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="20" id="aRC-ZI-34a"/>
                 <constraint firstItem="8Vm-ze-Hr5" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="20" id="efI-hr-F9p"/>
@@ -79,6 +92,7 @@
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="8Vm-ze-Hr5" secondAttribute="trailing" constant="20" id="iGX-cz-S4b"/>
                 <constraint firstItem="Xe6-z8-DiJ" firstAttribute="top" secondItem="8Vm-ze-Hr5" secondAttribute="bottom" constant="8" symbolic="YES" id="ndL-r8-y39"/>
                 <constraint firstItem="Abu-hu-2ff" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="44" id="rCQ-1W-92j"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="wMA-ih-Voj" secondAttribute="trailing" constant="20" id="zdW-aY-OG8"/>
             </constraints>
             <point key="canvasLocation" x="131.8840579710145" y="76.339285714285708"/>
         </view>
