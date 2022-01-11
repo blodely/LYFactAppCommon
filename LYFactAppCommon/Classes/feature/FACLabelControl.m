@@ -42,7 +42,7 @@
 		[self addSubview:view];
 		_label = view;
 		
-		[self.leftAnchor constraintEqualToAnchor:self.leftAnchor].active = YES;
+		[view.leftAnchor constraintEqualToAnchor:self.leftAnchor].active = YES;
 		[view.rightAnchor constraintEqualToAnchor:self.rightAnchor].active = YES;
 		[view.topAnchor constraintEqualToAnchor:self.topAnchor].active = YES;
 		[view.bottomAnchor constraintEqualToAnchor:self.bottomAnchor].active = YES;
