@@ -2,8 +2,8 @@
 //	FACBaseControl.m
 //	LYFactAppCommon
 //
-//	CREATED BY LUO YU ON 2021-12-13.
-//	Copyright (c) 2019~2021 骆昱 (Luo Yu, blodely) <indie.luo@gmail.com>
+//	CREATED BY LUO YU ON 2018-11-10.
+//	Copyright (c) 2018~2021 骆昱 (Luo Yu, blodely) <indie.luo@gmail.com>
 //
 //	Permission is hereby granted, free of charge, to any person obtaining a copy
 //	of this software and associated documentation files (the "Software"), to deal
@@ -67,6 +67,15 @@
 			[one setDebug:_debug];
 		}
 	}
+}
+
+// MARK: - OVERWRITE
+
+- (NSString *)description {
+	return [NSString stringWithFormat:@"%@ > %@",
+			NSStringFromClass([self class]),	// Class name
+			NSStringFromCGRect(self.frame)		// View frame
+			];
 }
 
 @end

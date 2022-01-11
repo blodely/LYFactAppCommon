@@ -44,6 +44,7 @@
 #import <LYFactAppCommon/FACBaseControl.h>
 
 #import <LYFactAppCommon/FACNoInteractView.h>
+#import <LYFactAppCommon/FACImageControl.h>
 #import <LYFactAppCommon/FACGradientView.h>
 #import <LYFactAppCommon/FACGradientControl.h>
 #import <LYFactAppCommon/FACPopBaseView.h>
