@@ -25,9 +25,15 @@
 //
 
 #import "LightShowNavVC.h"
+#import <LYFactAppCommon/FACRangeSlider.h>
 
 
-@interface LightShowNavVC () {}
+@interface LightShowNavVC () {
+	
+	__weak FACNoInteractView *noInteractView;
+	__weak FACGradientView *gradientView;
+	__weak FACRangeSlider *rangeSlider;
+}
 @end
 
 @implementation LightShowNavVC
@@ -47,6 +53,7 @@
 		view.translatesAutoresizingMaskIntoConstraints = NO;
 		[view border1Px];
 		[self.view addSubview:view];
+		noInteractView = view;
 		
 		[view.leftAnchor constraintEqualToAnchor:self.view.leftAnchor constant:FAC_PADDING].active = YES;
 		[view.topAnchor constraintEqualToAnchor:self.view.safeAreaLayoutGuide.topAnchor constant:FAC_PADDING * 6].active = YES;
@@ -66,11 +73,30 @@
 		
 		[view border1Px];
 		[self.view addSubview:view];
+		gradientView = view;
 		
 		[view.leftAnchor constraintEqualToAnchor:self.view.leftAnchor constant:FAC_PADDING].active = YES;
-		[view.topAnchor constraintEqualToAnchor:self.view.safeAreaLayoutGuide.topAnchor constant:FAC_PADDING * 9].active = YES;
+		[view.topAnchor constraintEqualToAnchor:noInteractView.bottomAnchor constant:FAC_PADDING].active = YES;
 		[view.widthAnchor constraintEqualToConstant:FAC_CTL_SIDE * 2].active = YES;
 		[view.heightAnchor constraintEqualToConstant:FAC_CTL_SIDE].active = YES;
+	}
+	
+	{
+		FACRangeSlider *view = [[FACRangeSlider alloc] init];
+		view.translatesAutoresizingMaskIntoConstraints = NO;
+		[view border1Px];
+		[self.view addSubview:view];
+		rangeSlider = view;
+		
+		[view.leftAnchor constraintEqualToAnchor:self.view.leftAnchor constant:FAC_PADDING].active = YES;
+		[view.rightAnchor constraintEqualToAnchor:self.view.rightAnchor constant:-FAC_PADDING].active = YES;
+		[view.topAnchor constraintEqualToAnchor:gradientView.bottomAnchor constant:FAC_PADDING].active = YES;
+		
+		{
+			[view.leftThumb border1Px];
+			[view.rightThumb border1Px];
+			[view.trackBackground border1Px];
+		}
 	}
 }
 
