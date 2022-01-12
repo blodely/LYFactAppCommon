@@ -45,6 +45,7 @@
 
 #import <LYFactAppCommon/FACNoInteractView.h>
 #import <LYFactAppCommon/FACImageControl.h>
+#import <LYFactAppCommon/FACImageToggle.h>
 #import <LYFactAppCommon/FACLabelControl.h>
 #import <LYFactAppCommon/FACGradientView.h>
 #import <LYFactAppCommon/FACGradientControl.h>
