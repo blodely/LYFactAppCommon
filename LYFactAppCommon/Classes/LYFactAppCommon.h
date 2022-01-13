@@ -60,6 +60,7 @@
 #import <LYFactAppCommon/FACHomeMenuItemCell.h>
 
 #import <LYFactAppCommon/UINavigationController+FAC.h>
+#import <LYFactAppCommon/UIImageView+FactAppCommon.h>
 
 #import <LYFactAppCommon/FACModel.h>
 
