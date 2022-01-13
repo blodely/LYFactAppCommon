@@ -34,4 +34,8 @@
 	[self setTabBarItemTitle:title image:[UIImage imageNamed:iconName] selectedImage:[UIImage imageNamed:iconSelected]];
 }
 
+- (void)setTabBarItemTitle:(NSString *)title andOriginalImageNamed:(NSString *)iconName selectedOriginalImageNamed:(NSString *)iconSelected {
+	[self setTabBarItemTitle:title image:[UIImage originalNamed:iconName] selectedImage:[UIImage originalNamed:iconSelected]];
+}
+
 @end

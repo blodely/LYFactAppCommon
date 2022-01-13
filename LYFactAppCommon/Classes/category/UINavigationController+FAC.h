@@ -29,6 +29,16 @@
 
 @interface UINavigationController (FAC)
 
+/// Configure view controller's tab bar item title, image, selected image at once.
+/// @param title title string
+/// @param iconName image name
+/// @param iconSelected selected image name
 - (void)setTabBarItemTitle:(NSString *)title andImageNamed:(NSString *)iconName selectedImageNamed:(NSString *)iconSelected;
+
+/// Configure view controller's tab bar item title, image(original rendered), selected image(original rendered) at once.
+/// @param title title string
+/// @param iconName image name
+/// @param iconSelected selected image name
+- (void)setTabBarItemTitle:(NSString *)title andOriginalImageNamed:(NSString *)iconName selectedOriginalImageNamed:(NSString *)iconSelected;
 
 @end
