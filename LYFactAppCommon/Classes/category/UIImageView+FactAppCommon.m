@@ -2,8 +2,8 @@
 //	UIImageView+FactAppCommon.m
 //	LYFactAppCommon
 //
-//	CREATED BY LUO YU ON 2022-01-13.
-//	Copyright (c) 2022 骆昱 (Luo Yu, blodely) <indie.luo@gmail.com>
+//	CREATED BY LUO YU ON 2017-03-01. (LYCore)
+//	Copyright (c) 2017~2022 骆昱 (Luo Yu, blodely) <indie.luo@gmail.com>
 //
 //	Permission is hereby granted, free of charge, to any person obtaining a copy
 //	of this software and associated documentation files (the "Software"), to deal
