@@ -29,4 +29,7 @@
 
 @interface FACModel : NSObject <NSCoding, NSCopying>
 
+/// Unique ID
+@property (nonatomic, strong) NSString *uniqueID;
+
 @end

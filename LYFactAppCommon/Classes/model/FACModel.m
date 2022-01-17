@@ -33,4 +33,29 @@
 
 @implementation FACModel
 
+- (instancetype)initWithCoder:(NSCoder *)coder {
+	if (self = [super init]) {
+		self.uniqueID = [coder decodeObjectForKey:@"self.uniqueID"];
+	}
+	return self;
+}
+
+- (void)encodeWithCoder:(NSCoder *)coder {
+	[coder encodeObject:self.uniqueID forKey:@"self.uniqueID"];
+}
+
+- (id)copyWithZone:(NSZone *)zone {
+	FACModel *copy = [[[self class] allocWithZone:zone] init];
+	
+	if (copy != nil) {
+		copy.uniqueID = self.uniqueID;
+	}
+	
+	return copy;
+}
+
+- (NSString *)description {
+	return [NSString stringWithFormat:@"%@ -> UniqueID=%@", NSStringFromClass([self class]), _uniqueID];
+}
+
 @end
