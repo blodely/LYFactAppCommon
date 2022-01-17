@@ -27,6 +27,13 @@
 #import <UIKit/UIKit.h>
 
 
-@interface FACBaseTabBarVC : UITabBarController
+@interface FACBaseTabBarVC : UITabBarController {
+	BOOL lightStatusbar;
+}
+
+/// initial enter
+- (void)initial;
+
+- (void)updateStatusbarLight:(BOOL)lightStyle;
 
 @end

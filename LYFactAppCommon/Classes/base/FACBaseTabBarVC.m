@@ -37,6 +37,16 @@
 
 // MARK: - INIT
 
+- (instancetype)init {
+	if (self = [super init]) {
+		[self initial];
+	}
+	return self;
+}
+
+- (void)initial {
+}
+
 // MARK: VIEW LIFE CYCLE
 
 /*
@@ -46,6 +56,15 @@
 }
 */
 
+- (void)viewWillAppear:(BOOL)animated {
+	[super viewWillAppear:animated];
+	[self setNeedsStatusBarAppearanceUpdate];
+}
+
+- (UIStatusBarStyle)preferredStatusBarStyle {
+	return lightStatusbar ? UIStatusBarStyleLightContent : UIStatusBarStyleDefault;
+}
+
 // MARK: MEMORY MANAGEMENT
 
 /*
@@ -54,6 +73,11 @@
 */
 
 // MARK: - METHOD
+
+- (void)updateStatusbarLight:(BOOL)lightStyle {
+	lightStatusbar = lightStyle;
+	[self setNeedsStatusBarAppearanceUpdate];
+}
 
 // MARK: PRIVATE METHOD
 
