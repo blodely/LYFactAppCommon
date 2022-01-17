@@ -32,7 +32,7 @@ FOUNDATION_EXPORT NSString *const FACBaseTableCellIdentifier;
 @interface FACBaseTableCell : UITableViewCell
 
 /**
- initial method
+ initial method will call this.
  */
 - (void)initial;
 
