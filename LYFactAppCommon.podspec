@@ -4,7 +4,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'LYFactAppCommon'
-  s.version          = '1.0.8'
+  s.version          = '1.0.9'
   s.summary          = 'LYFactAppCommon.'
 
   s.description      = <<-DESC
@@ -15,6 +15,7 @@ LYFactAppCommon:
 * 1.0.6: Refactoring: pop view base(LYPopView); view, control, view controller, table cell, collection cell, image control, label control(LYCore)
 * 1.0.7: Refactoring: web image loader(LYCore)
 * 1.0.8: Model baseclass.
+* 1.0.9: header & import.
                        DESC
 
   s.homepage         = 'https://github.com/blodely/LYFactAppCommon'
