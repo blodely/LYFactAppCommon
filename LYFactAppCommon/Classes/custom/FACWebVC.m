@@ -26,6 +26,7 @@
 
 #import "FACWebVC.h"
 #import <LYCategory/LYCategory.h>
+#import <LYFactAppCommon/LYFactAppCommon.h>
 
 
 @interface FACWebVC () {}

@@ -30,6 +30,6 @@
 
 FOUNDATION_EXPORT NSString *const FACMenuItemCellIdentifier;
 
-@interface FACMenuItemCell : UITableViewCell
+@interface FACMenuItemCell : FACBaseTableCell
 
 @end

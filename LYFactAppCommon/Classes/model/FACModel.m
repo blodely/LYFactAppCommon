@@ -26,6 +26,7 @@
 
 #import "FACModel.h"
 #import <LYCategory/LYCategory.h>
+#import <LYFactAppCommon/LYFactAppCommon.h>
 
 
 @interface FACModel () {}

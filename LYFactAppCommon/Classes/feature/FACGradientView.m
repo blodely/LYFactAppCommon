@@ -26,6 +26,7 @@
 
 #import "FACGradientView.h"
 #import <LYCategory/LYCategory.h>
+#import <LYFactAppCommon/LYFactAppCommon.h>
 
 
 @implementation FACGradientView

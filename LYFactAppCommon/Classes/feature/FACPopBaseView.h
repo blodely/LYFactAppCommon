@@ -24,7 +24,8 @@
 //	THE SOFTWARE.
 //
 
-#import <LYFactAppCommon/LYFactAppCommon.h>
+#import <LYFactAppCommon/FACBaseView.h>
+#import <LYFactAppCommon/FACBaseControl.h>
 
 
 @interface FACPopBaseView : FACBaseView {

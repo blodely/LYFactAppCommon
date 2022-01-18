@@ -25,6 +25,7 @@
 //
 
 #import "FACPopBaseView.h"
+#import <LYFactAppCommon/LYFactAppCommon.h>
 
 
 @implementation FACPopBaseView

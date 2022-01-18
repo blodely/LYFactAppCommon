@@ -25,6 +25,7 @@
 //
 
 #import "FACImageToggle.h"
+#import <LYFactAppCommon/LYFactAppCommon.h>
 
 
 @implementation FACImageToggle

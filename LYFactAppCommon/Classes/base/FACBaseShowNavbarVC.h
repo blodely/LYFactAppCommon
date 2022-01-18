@@ -24,7 +24,7 @@
 //	THE SOFTWARE.
 //
 
-#import <LYFactAppCommon/LYFactAppCommon.h>
+#import <LYFactAppCommon/FACBaseVC.h>
 
 
 @interface FACBaseShowNavbarVC : FACBaseVC
