@@ -1,5 +1,5 @@
 //
-//	FACTableView.h
+//  FACBaseTableView.m
 //	LYFactAppCommon
 //
 //	CREATED BY LUO YU ON 2022-01-19.
@@ -24,11 +24,34 @@
 //	THE SOFTWARE.
 //
 
-#import <UIKit/UIKit.h>
+#import "FACBaseTableView.h"
+#import <LYFactAppCommon/LYFactAppCommon.h>
 
 
-@interface FACTableView : UITableView
+@interface FACBaseTableView () {}
+@end
 
-- (void)initial;
+@implementation FACBaseTableView
+
+- (instancetype)init {
+	if (self = [super initWithFrame:CGRectZero style:UITableViewStylePlain]) {
+		[self initial];
+	}
+	return self;
+}
+
+- (instancetype)initWithFrame:(CGRect)frame style:(UITableViewStyle)style {
+	if (self = [super initWithFrame:frame style:style]) {
+		[self initial];
+	}
+	return self;
+}
+
+- (void)initial {
+	self.separatorStyle = UITableViewCellSeparatorStyleNone;
+	self.backgroundColor = [UIColor clearColor];
+	
+	[self registerClass:[FACBaseTableCell class] forCellReuseIdentifier:FACBaseTableCellIdentifier];
+}
 
 @end

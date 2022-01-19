@@ -42,7 +42,7 @@
 
 #import <LYFactAppCommon/FACBaseView.h>
 #import <LYFactAppCommon/FACBaseControl.h>
-#import <LYFactAppCommon/FACTableView.h>
+#import <LYFactAppCommon/FACBaseTableView.h>
 
 #import <LYFactAppCommon/FACNoInteractView.h>
 #import <LYFactAppCommon/FACImageControl.h>
