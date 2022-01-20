@@ -94,6 +94,17 @@
 
 // MARK: BLOCK
 
+// MARK:
+
+/**
+ overwrite -description method
+
+ @return description string.
+ */
+- (NSString *)description {
+	return [NSString stringWithFormat:@"%@\n", NSStringFromClass([self class])];
+}
+
 // MARK: - DELEGATE
 
 // MARK:
