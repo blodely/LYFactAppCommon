@@ -63,6 +63,8 @@
 		layout.minimumLineSpacing = 0;
 		layout.minimumInteritemSpacing = 0;
 	}
+	
+	[self registerClass:[FACBaseCollectionCell class] forCellWithReuseIdentifier:FACBaseCollectionCellIdentifier];
 }
 
 @end
