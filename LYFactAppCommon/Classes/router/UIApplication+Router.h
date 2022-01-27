@@ -29,4 +29,6 @@
 
 @interface UIApplication (Router)
 
++ (void)sharedAppRoute:(NSString *)appscheme to:(NSString *)portal;
+
 @end

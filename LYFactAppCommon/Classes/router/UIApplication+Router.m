@@ -25,8 +25,14 @@
 //
 
 #import "UIApplication+Router.h"
+#import <LYFactAppCommon/LYFactAppCommon.h>
 
 
 @implementation UIApplication (Router)
+
++ (void)sharedAppRoute:(NSString *)appscheme to:(NSString *)portal {
+	NSURL *url = [NSURL URLWithFormat:@"%@:/", appscheme, portal];
+	[[UIApplication sharedApplication] justOpenURL:url];
+}
 
 @end
