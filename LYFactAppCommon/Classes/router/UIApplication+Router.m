@@ -31,7 +31,7 @@
 @implementation UIApplication (Router)
 
 + (void)sharedAppRoute:(NSString *)appscheme to:(NSString *)portal {
-	NSURL *url = [NSURL URLWithFormat:@"%@:/", appscheme, portal];
+	NSURL *url = [NSURL URLWithFormat:@"%@:/%@", appscheme, portal];
 	[[UIApplication sharedApplication] justOpenURL:url];
 }
 
