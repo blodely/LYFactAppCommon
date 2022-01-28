@@ -64,6 +64,7 @@
 #import <LYFactAppCommon/UIApplication+Router.h>
 #import <LYFactAppCommon/UINavigationController+FAC.h>
 #import <LYFactAppCommon/UIImageView+FactAppCommon.h>
+#import <LYFactAppCommon/FACImageControl+FactAppCommon.h>
 
 #import <LYFactAppCommon/FACModel.h>
 
