@@ -24,9 +24,18 @@
 //	SOFTWARE.
 //
 
-#import <LYFactAppCommon/LYFactAppCommon.h>
+#import <LYFactAppCommon/FACImageControl.h>
 
 
 @interface FACImageControl (FactAppCommon)
+
+/**
+ Set image with URL string and placeholder image name.
+ Refactoring: moved from LYCore:network module.
+
+ @param URLString web image URL string
+ @param imageName local image name
+ */
+- (void)setImageWithURLString:(NSString *)URLString andPlaceholderNamed:(NSString *)imageName;
 
 @end
