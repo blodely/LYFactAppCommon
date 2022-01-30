@@ -38,4 +38,11 @@
  */
 - (void)setImageWithURLString:(NSString *)URLString andPlaceholderNamed:(NSString *)imageName;
 
+/// Set image with URL string and placeholder image name at specified bundle
+/// Refactoring: moved from LYCore:network module.
+/// @param URLString web image URL string
+/// @param imageName local placeholder image name
+/// @param bundle bundle object
+- (void)setImageWithURLString:(NSString *)URLString andPlaceholderNamed:(NSString *)imageName inBundle:(NSBundle *)bundle;
+
 @end

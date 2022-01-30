@@ -77,4 +77,14 @@
 	}
 }
 
+- (void)setImageWithURLString:(NSString *)URLString andPlaceholderNamed:(NSString *)imageName inBundle:(NSBundle *)bundle {
+	
+	if (URLString == nil || ![URLString isKindOfClass:[NSString class]] || [URLString isEqualToString:@""]) {
+		self.imageView.image = [UIImage imageNamed:imageName inBundle:bundle compatibleWithTraitCollection:nil];
+		return;
+	}
+	
+	[self.imageView setImageWithURL:[NSURL URLWithString:URLString] placeholderImage:[UIImage imageNamed:imageName inBundle:bundle compatibleWithTraitCollection:nil]];
+}
+
 @end
