@@ -25,10 +25,56 @@
 //
 
 #import "FACEmpty.h"
+#import <LYFactAppCommon/LYFactAppCommon.h>
 
+
+@interface FACEmpty () {}
+@end
 
 @implementation FACEmpty
 
+- (instancetype)initWithFrame:(CGRect)frame {
+	frame.origin.x = 0;
+	frame.size.width = WIDTH;
+	if (self = [super initWithFrame:frame]) {
+	}
+	return self;
+}
 
+- (void)initial {
+	[super initial];
+	
+	{
+		// MARK: PICTURE IMAGE VIEW
+		UIImageView *view = [[UIImageView alloc] init];
+		view.translatesAutoresizingMaskIntoConstraints = NO;
+		[self addSubview:view];
+		_ivPic = view;
+		
+		[view.centerXAnchor constraintEqualToAnchor:self.centerXAnchor].active = YES;
+		[view.topAnchor constraintEqualToAnchor:self.topAnchor].active = YES;
+		
+		[view.widthAnchor constraintGreaterThanOrEqualToConstant:FAC_CTL_SIDE].active = YES;
+		[view.heightAnchor constraintGreaterThanOrEqualToConstant:FAC_CTL_SIDE].active = YES;
+	}
+	
+	{
+		// MARK: HINT LABEL
+		UILabel *view = [[UILabel alloc] init];
+		view.translatesAutoresizingMaskIntoConstraints = NO;
+		view.numberOfLines = 0;
+		view.font = [UIFont systemFontOfSize:[UIFont smallSystemFontSize]];
+		view.textAlignment = NSTextAlignmentCenter;
+		view.textColor = [UIColor lightGrayColor];
+		[self addSubview:view];
+		_lblTitle = view;
+		
+		[view.leftAnchor constraintEqualToAnchor:self.leftAnchor].active = YES;
+		[view.rightAnchor constraintEqualToAnchor:self.rightAnchor].active = YES;
+		[view.widthAnchor constraintEqualToConstant:WIDTH].active = YES;
+		[view.topAnchor constraintEqualToAnchor:_ivPic.bottomAnchor constant:FAC_PADDING].active = YES;
+		[view.bottomAnchor constraintEqualToAnchor:self.bottomAnchor].active = YES;
+	}
+}
 
 @end

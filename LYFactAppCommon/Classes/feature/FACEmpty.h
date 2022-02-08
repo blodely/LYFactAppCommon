@@ -28,5 +28,6 @@
 
 
 @interface FACEmpty : FACBaseView
-
+@property (nonatomic, weak) UIImageView *ivPic;
+@property (nonatomic, weak) UILabel *lblTitle;
 @end
