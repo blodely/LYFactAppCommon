@@ -45,6 +45,11 @@
 	[super initial];
 	
 	{
+		self.hidden = YES;
+		self.userInteractionEnabled = NO;
+	}
+	
+	{
 		// MARK: PICTURE IMAGE VIEW
 		UIImageView *view = [[UIImageView alloc] init];
 		view.translatesAutoresizingMaskIntoConstraints = NO;
