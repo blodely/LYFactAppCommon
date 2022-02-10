@@ -28,7 +28,7 @@
 
 
 typedef NS_ENUM(NSUInteger, FACEmptyType) {
-	FACEmptyTypeNone = 0,
+	FACEmptyTypeDefault = 0,
 	FACEmptyTypeNetwork = 1,
 	FACEmptyTypeNoData = 2,
 };

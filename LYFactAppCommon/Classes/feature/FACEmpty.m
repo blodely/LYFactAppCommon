@@ -33,6 +33,8 @@
 
 @implementation FACEmpty
 
+// MARK: - INIT
+
 - (instancetype)initWithFrame:(CGRect)frame {
 	frame.origin.x = 0;
 	frame.size.width = WIDTH;
@@ -47,6 +49,7 @@
 	{
 		self.hidden = YES;
 		self.userInteractionEnabled = NO;
+		_type = FACEmptyTypeDefault;
 	}
 	
 	{
@@ -81,5 +84,9 @@
 		[view.bottomAnchor constraintEqualToAnchor:self.bottomAnchor].active = YES;
 	}
 }
+
+// MARK: - METHOD
+
+// MARK: PROPERTY
 
 @end
