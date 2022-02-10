@@ -27,7 +27,14 @@
 #import <LYFactAppCommon/LYFactAppCommon.h>
 
 
+typedef NS_ENUM(NSUInteger, FACEmptyType) {
+	FACEmptyTypeNone = 0,
+	FACEmptyTypeNetwork = 1,
+	FACEmptyTypeNoData = 2,
+};
+
 @interface FACEmpty : FACBaseView
 @property (nonatomic, weak) UIImageView *ivPic;
 @property (nonatomic, weak) UILabel *lblTitle;
+@property (nonatomic, assign) FACEmptyType type;
 @end
