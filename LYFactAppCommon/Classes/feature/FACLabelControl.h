@@ -33,4 +33,5 @@
  */
 @interface FACLabelControl : FACBaseControl
 @property (nonatomic, weak) UILabel *label;
+@property (nonatomic, weak) UIFont *font;
 @end

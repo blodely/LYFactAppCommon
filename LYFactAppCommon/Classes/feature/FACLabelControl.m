@@ -30,6 +30,8 @@
 
 @implementation FACLabelControl
 
+// MARK: - INIT
+
 - (void)initial {
 	[super initial];
 	
@@ -49,4 +51,15 @@
 	}
 }
 
+// MARK: - METHOD
+
+// MARK: PROPERTY
+
+- (void)setFont:(UIFont *)font {
+	_label.font = font;
+}
+
+- (UIFont *)font {
+	return _label.font;
+}
 @end
