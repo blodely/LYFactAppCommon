@@ -71,6 +71,14 @@
 	return _label.text;
 }
 
+- (void)setTextAlignment:(NSTextAlignment)textAlignment {
+	_label.textAlignment = textAlignment;
+}
+
+- (NSTextAlignment)textAlignment {
+	return _label.textAlignment;
+}
+
 - (void)setTextColor:(UIColor *)textColor {
 	_label.textColor = textColor;
 }
