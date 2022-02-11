@@ -62,4 +62,12 @@
 - (UIFont *)font {
 	return _label.font;
 }
+
+- (void)setText:(NSString *)text {
+	_label.text = text;
+}
+
+- (NSString *)text {
+	return _label.text;
+}
 @end
