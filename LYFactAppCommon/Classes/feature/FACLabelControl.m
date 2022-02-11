@@ -70,4 +70,13 @@
 - (NSString *)text {
 	return _label.text;
 }
+
+- (void)setTextColor:(UIColor *)textColor {
+	_label.textColor = textColor;
+}
+
+- (UIColor *)textColor {
+	return _label.textColor;
+}
+
 @end
