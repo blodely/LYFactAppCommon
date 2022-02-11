@@ -34,6 +34,7 @@
 @interface FACLabelControl : FACBaseControl
 @property (nonatomic, weak) UILabel *label;
 @property (nonatomic, weak) UIFont *font;
+@property (nonatomic) NSInteger numberOfLines;
 @property (nonatomic, weak) NSString *text;
 @property (nonatomic) NSTextAlignment textAlignment;
 @property (nonatomic, weak) UIColor *textColor;

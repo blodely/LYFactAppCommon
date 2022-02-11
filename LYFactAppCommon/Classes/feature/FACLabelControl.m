@@ -63,6 +63,14 @@
 	return _label.font;
 }
 
+- (void)setNumberOfLines:(NSInteger)numberOfLines {
+	_label.numberOfLines = numberOfLines;
+}
+
+- (NSInteger)numberOfLines {
+	return _label.numberOfLines;
+}
+
 - (void)setText:(NSString *)text {
 	_label.text = text;
 }
