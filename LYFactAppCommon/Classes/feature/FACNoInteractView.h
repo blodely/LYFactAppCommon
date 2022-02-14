@@ -32,6 +32,8 @@
 /// debug mode
 @property (nonatomic, assign) BOOL debug;
 
+- (instancetype)initWithHexColor:(NSString *)color andAlpha:(CGFloat)alpha;
+
 /// after initial will call this method.
 - (void)initial;
 
