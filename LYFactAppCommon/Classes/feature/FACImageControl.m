@@ -49,4 +49,24 @@
 	}
 }
 
+// MARK: - METHOD
+
+// MARK: PROPERTY
+
+- (void)setContentMode:(UIViewContentMode)contentMode {
+	_imageView.contentMode = contentMode;
+}
+
+- (UIViewContentMode)contentMode {
+	return _imageView.contentMode;
+}
+
+- (void)setImage:(UIImage *)image {
+	_imageView.image = image;
+}
+
+- (UIImage *)image {
+	return _imageView.image;
+}
+
 @end

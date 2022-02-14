@@ -33,4 +33,6 @@
  */
 @interface FACImageControl : FACBaseControl
 @property (nonatomic, weak) UIImageView *imageView;
+@property (nonatomic) UIViewContentMode contentMode;
+@property (nonatomic, weak) UIImage *image;
 @end
