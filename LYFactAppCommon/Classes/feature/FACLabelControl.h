@@ -38,4 +38,5 @@
 @property (nonatomic, weak) NSString *text;
 @property (nonatomic) NSTextAlignment textAlignment;
 @property (nonatomic, weak) UIColor *textColor;
+@property (nonatomic, weak) NSAttributedString *attributedText;
 @end

@@ -95,4 +95,12 @@
 	return _label.textColor;
 }
 
+- (void)setAttributedText:(NSAttributedString *)attributedText {
+	_label.attributedText = attributedText;
+}
+
+- (NSAttributedString *)attributedText {
+	return _label.attributedText;
+}
+
 @end
