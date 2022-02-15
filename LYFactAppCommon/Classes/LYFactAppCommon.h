@@ -68,6 +68,7 @@
 #import <LYFactAppCommon/FACImageControl+FactAppCommon.h>
 
 #import <LYFactAppCommon/FACModel.h>
+#import <LYFactAppCommon/FACApp.h>
 
 
 FOUNDATION_EXPORT CGFloat const FAC_PADDING;
