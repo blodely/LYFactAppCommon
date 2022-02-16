@@ -29,4 +29,7 @@
 
 @interface FACApp : FACModel
 
+/// Current app instance
++ (instancetype)current;
+
 @end

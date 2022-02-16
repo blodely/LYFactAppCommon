@@ -33,4 +33,15 @@
 
 @implementation FACApp
 
+// MARK: - INIT
+
++ (instancetype)current {
+	static FACApp *sharedFacApp;
+	static dispatch_once_t onceToken;
+	dispatch_once(&onceToken, ^{
+		sharedFacApp = [[FACApp alloc] init];
+	});
+	return sharedFacApp;
+}
+
 @end
