@@ -4,7 +4,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'LYFactAppCommon'
-  s.version          = '1.0.15'
+  s.version          = '1.0.16'
   s.summary          = 'LYFactAppCommon.'
 
   s.description      = <<-DESC
