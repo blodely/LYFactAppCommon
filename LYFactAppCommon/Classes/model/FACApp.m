@@ -44,4 +44,42 @@
 	return sharedFacApp;
 }
 
+- (instancetype)init {
+	if (self = [super init]) {
+		self.uniqueID = @"space.luoyu.dimo";
+		_loggedIn = NO;
+	}
+	return self;
+}
+
+// MARK: CODING & COPYING
+
+- (instancetype)initWithCoder:(NSCoder *)coder {
+	if (self = [super initWithCoder:coder]) {
+		self.loggedIn = [coder decodeBoolForKey:@"self.loggedIn"];
+	}
+	return self;
+}
+
+- (id)copyWithZone:(NSZone *)zone {
+	FACApp *app = (FACApp *)[super copyWithZone:zone];
+	
+	if (app != nil) {
+		app.loggedIn = self.isLoggedIn;
+	}
+	
+	return app;
+}
+
+- (void)encodeWithCoder:(NSCoder *)coder {
+	[super encodeWithCoder:coder];
+	
+	[coder encodeBool:self.isLoggedIn forKey:@"self.loggedIn"];
+}
+
+// MARK: - METHOD
+// MARK: PRIVATE METHOD
+// MARK: PROPERTY
+// MARK: BLOCK
+
 @end

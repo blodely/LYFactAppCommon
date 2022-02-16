@@ -32,4 +32,6 @@
 /// Current app instance
 + (instancetype)current;
 
+@property (nonatomic, assign, getter=isLoggedIn) BOOL loggedIn;
+
 @end
