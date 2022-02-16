@@ -62,8 +62,26 @@
 // MARK: - METHOD
 
 - (BOOL)persist {
-	// TODO:
-	return NO;
+	
+	// CREATE FOLDER IF IT'S NOT EXIST
+	[NSFileManager createFolderIfNotExistInDocuments:NSStringFromClass([self class])];
+	
+	if (_uniqueID == nil || [_uniqueID isEmpty]) {
+		// NOT A HEALTH MODEL INSTANCE
+		return NO;
+	}
+	
+	NSString *modelpath = [NSHomeDirectory() stringByAppendingFormat:@"/Documents/%@/%@", NSStringFromClass([self class]), _uniqueID];
+	
+	if ([NSFileManager isFileExistAtPath:modelpath]) {
+		// FILE ALREADY EXIST
+		// THEN, DELETE
+		[[NSFileManager defaultManager] removeItemAtPath:modelpath error:NULL];
+	}
+	
+	BOOL result = [NSKeyedArchiver archiveRootObject:self toFile:modelpath];
+	
+	return result;
 }
 
 // MARK: PRIVATE METHOD
