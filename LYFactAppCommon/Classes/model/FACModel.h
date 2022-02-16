@@ -32,4 +32,7 @@
 /// Unique ID
 @property (nonatomic, strong) NSString *uniqueID;
 
+/// Persist model to archived file
+- (BOOL)persist;
+
 @end

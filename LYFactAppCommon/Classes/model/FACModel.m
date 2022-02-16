@@ -34,6 +34,10 @@
 
 @implementation FACModel
 
+// MARK: - INIT
+
+// MARK: CODING & COPYING
+
 - (instancetype)initWithCoder:(NSCoder *)coder {
 	if (self = [super init]) {
 		self.uniqueID = [coder decodeObjectForKey:@"self.uniqueID"];
@@ -54,6 +58,17 @@
 	
 	return copy;
 }
+
+// MARK: - METHOD
+
+- (BOOL)persist {
+	// TODO:
+	return NO;
+}
+
+// MARK: PRIVATE METHOD
+
+// MARK: - OVERRIDE
 
 - (NSString *)description {
 	return [NSString stringWithFormat:@"%@ -> UniqueID=%@", NSStringFromClass([self class]), _uniqueID];

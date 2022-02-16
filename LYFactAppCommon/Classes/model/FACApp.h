@@ -32,6 +32,13 @@
 /// Current app instance
 + (instancetype)current;
 
+/// App user login status
 @property (nonatomic, assign, getter=isLoggedIn) BOOL loggedIn;
+
+/// App login user ID
+@property (nonatomic, strong) NSString *userID;
+
+/// App user logout
+- (void)logout;
 
 @end

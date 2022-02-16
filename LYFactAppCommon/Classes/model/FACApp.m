@@ -48,6 +48,7 @@
 	if (self = [super init]) {
 		self.uniqueID = @"space.luoyu.dimo";
 		_loggedIn = NO;
+		_userID = nil;
 	}
 	return self;
 }
@@ -57,6 +58,7 @@
 - (instancetype)initWithCoder:(NSCoder *)coder {
 	if (self = [super initWithCoder:coder]) {
 		self.loggedIn = [coder decodeBoolForKey:@"self.loggedIn"];
+		self.userID = [coder decodeObjectForKey:@"self.userID"];
 	}
 	return self;
 }
@@ -66,6 +68,7 @@
 	
 	if (app != nil) {
 		app.loggedIn = self.isLoggedIn;
+		app.userID = self.userID;
 	}
 	
 	return app;
@@ -75,9 +78,18 @@
 	[super encodeWithCoder:coder];
 	
 	[coder encodeBool:self.isLoggedIn forKey:@"self.loggedIn"];
+	[coder encodeObject:self.userID forKey:@"self.userID"];
 }
 
 // MARK: - METHOD
+
+- (void)logout {
+	_userID = nil;
+	_loggedIn = NO;
+	
+	[self persist];
+}
+
 // MARK: PRIVATE METHOD
 // MARK: PROPERTY
 // MARK: BLOCK
