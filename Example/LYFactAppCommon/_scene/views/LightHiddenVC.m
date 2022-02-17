@@ -46,16 +46,23 @@
 	[super loadView];
 	
 	{
-		UIButton *view = [UIButton buttonWithType:UIButtonTypeSystem];
+		FACBaseNavView *view = [[FACBaseNavView alloc] init];
 		view.translatesAutoresizingMaskIntoConstraints = NO;
-		[view border1Px];
+		view.lblTitle.text = @"ViewController";
 		[self.view addSubview:view];
-		[view addTarget:self action:@selector(backButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
 		
-		[view.topAnchor constraintEqualToAnchor:self.view.safeAreaLayoutGuide.topAnchor].active = YES;
+		[view navBackAction:^{
+			[self.navigationController popViewControllerAnimated:YES];
+		}];
+		
 		[view.leftAnchor constraintEqualToAnchor:self.view.leftAnchor].active = YES;
-		[view.widthAnchor constraintEqualToConstant:FAC_CTL_SIDE].active = YES;
-		[view.heightAnchor constraintEqualToConstant:FAC_CTL_SIDE].active = YES;
+		[view.rightAnchor constraintEqualToAnchor:self.view.rightAnchor].active = YES;
+		[view.topAnchor constraintEqualToAnchor:self.view.topAnchor].active = YES;
+		
+		
+		// FOR TESTING PURPOSE, DISPLAY VIEW'S BORDER
+		[view border1Px];
+		[view.btnBack border1Px];
 	}
 }
 
