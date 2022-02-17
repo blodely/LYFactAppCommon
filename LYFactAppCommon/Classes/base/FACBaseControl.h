@@ -34,6 +34,11 @@
 /// debug mode
 @property (nonatomic, assign) BOOL debug;
 
+/// after initial will call this method.
 - (void)initial;
+
+/// setup ui elements with values
+/// @param data values data object
+- (void)setupValues:(id)data;
 
 @end

@@ -51,6 +51,9 @@
 
 // MARK: - METHOD
 
+- (void)setupValues:(id)data {
+}
+
 // MARK: PROPERTY
 
 - (void)setDebug:(BOOL)debug {
