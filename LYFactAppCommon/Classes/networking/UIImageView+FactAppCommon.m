@@ -85,6 +85,16 @@
 	[self setImageWithURL:[NSURL URLWithString:URLString] placeholderImage:[UIImage imageNamed:imageName inBundle:bundle compatibleWithTraitCollection:nil]];
 }
 
+- (void)setImageWithURLString:(NSString *)URLString andPlaceholder:(UIImage *)image {
+	
+	if (URLString == nil || ![URLString isKindOfClass:[NSString class]] || [URLString isEqualToString:@""]) {
+		self.image = image;
+		return;
+	}
+	
+	[self setImageWithURL:[NSURL URLWithString:URLString] placeholderImage:image];
+}
+
 - (void)setAnimationImageURLs:(NSArray<NSString *> *)animationImgURLs {
 	// TODO: IMAGE URLS TO SHOW AS ANIMATION
 	dispatch_async(dispatch_get_global_queue(0, 0), ^{

@@ -45,4 +45,9 @@
 /// @param bundle bundle object
 - (void)setImageWithURLString:(NSString *)URLString andPlaceholderNamed:(NSString *)imageName inBundle:(NSBundle *)bundle;
 
+/// Set image with URL string and placeholder image object
+/// @param URLString web image URL string
+/// @param image local placeholder image object
+- (void)setImageWithURLString:(NSString *)URLString andPlaceholder:(UIImage *)image;
+
 @end
