@@ -36,5 +36,9 @@ FOUNDATION_EXPORT NSString *const FACBaseCollectionCellIdentifier;
  */
 - (void)initial;
 
+/// setup ui elements with values
+/// @param data values data object
+- (void)setupValues:(id)data;
+
 @end
 

@@ -56,6 +56,11 @@ NSString *const FACBaseCollectionCellIdentifier = @"FACBaseCollectionCellIdentif
 - (void)initial {
 }
 
+// MARK: - METHOD
+
+- (void)setupValues:(id)data {
+}
+
 // MARK: - OVERWRITE
 
 /**
