@@ -31,6 +31,8 @@
 
 @interface FACBaseNavView : FACBaseControl
 
+@property (nonatomic, weak) NSString *title;
+
 /// Nav-back button
 @property (nonatomic, weak) FACImageControl *btnBack;
 

@@ -91,6 +91,16 @@
 
 // MARK: - METHOD
 
+// MARK: PROPERTY
+
+- (void)setTitle:(NSString *)title {
+	_lblTitle.text = title;
+}
+
+- (NSString *)title {
+	return _lblTitle.text;
+}
+
 // MARK: BLOCK
 
 - (void)navBackAction:(void (^)(void))action {
