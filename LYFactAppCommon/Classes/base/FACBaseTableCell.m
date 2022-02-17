@@ -32,6 +32,8 @@ NSString *const FACBaseTableCellIdentifier = @"FACBaseTableCellIdentifier";
 
 @implementation FACBaseTableCell
 
+// MARK: - INIT
+
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
         [self initial];
@@ -51,6 +53,13 @@ NSString *const FACBaseTableCellIdentifier = @"FACBaseTableCellIdentifier";
     // INITIALIZATION CODE
 	[self initial];
 }
+
+// MARK: - METHOD
+
+- (void)setupValues:(id)data {
+}
+
+// MARK: - OVERRIDE
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
