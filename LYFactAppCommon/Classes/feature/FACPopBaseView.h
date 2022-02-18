@@ -33,6 +33,9 @@
 	__weak FACBaseView *vContent;
 }
 
+/// disable background view touch to dismiss pop action
+@property (nonatomic, assign) BOOL disableBackgroundTouchDismiss;
+
 + (instancetype)pop;
 
 - (void)show;

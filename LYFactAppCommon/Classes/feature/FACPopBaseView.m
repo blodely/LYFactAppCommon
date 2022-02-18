@@ -30,6 +30,14 @@
 
 @implementation FACPopBaseView
 
+// MARK: - ACTION
+
+- (void)backgroundTapped:(id)sender {
+	if (self.disableBackgroundTouchDismiss == NO) {
+		[self dismiss];
+	}
+}
+
 // MARK: - INIT
 
 - (instancetype)initWithFrame:(CGRect)frame {
@@ -44,11 +52,17 @@
 	[super initial];
 	
 	{
+		_disableBackgroundTouchDismiss = NO;
+	}
+	
+	{
 		FACBaseControl *view = [[FACBaseControl alloc] init];
 		view.translatesAutoresizingMaskIntoConstraints = NO;
 		view.backgroundColor = [UIColor colorWithWhite:0 alpha:GOLDEN_RATIO];
 		[self addSubview:view];
 		cBg = view;
+		
+		[view addTarget:self action:@selector(backgroundTapped:) forControlEvents:UIControlEventTouchUpInside];
 		
 		[view.leftAnchor constraintEqualToAnchor:self.leftAnchor].active = YES;
 		[view.rightAnchor constraintEqualToAnchor:self.rightAnchor].active = YES;
