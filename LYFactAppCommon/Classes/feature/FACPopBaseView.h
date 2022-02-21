@@ -38,6 +38,7 @@
 
 + (instancetype)pop;
 
+/// Show pop view on current key window
 - (void)show;
 
 - (void)dismiss;
