@@ -45,6 +45,7 @@
 #import <LYFactAppCommon/FACBaseNavView.h>
 #import <LYFactAppCommon/FACBaseTableView.h>
 #import <LYFactAppCommon/FACBaseCollectionView.h>
+#import <LYFactAppCommon/FACBaseFlowCollectionView.h>
 
 #import <LYFactAppCommon/FACNoInteractView.h>
 #import <LYFactAppCommon/FACImageControl.h>
