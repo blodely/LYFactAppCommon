@@ -29,7 +29,7 @@
 
 @interface FACBaseCollectionView : UICollectionView
 
-- (instancetype)initWithLayout:(UICollectionViewLayout *)layout;
+- (instancetype)initWithLayout:(__kindof UICollectionViewLayout *)layout;
 
 - (void)initial;
 

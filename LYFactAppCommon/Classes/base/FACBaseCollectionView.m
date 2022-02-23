@@ -40,7 +40,7 @@
 	return self;
 }
 
-- (instancetype)initWithLayout:(UICollectionViewLayout *)layout {
+- (instancetype)initWithLayout:(__kindof UICollectionViewLayout *)layout {
 	if (self = [super initWithFrame:CGRectZero collectionViewLayout:layout]) {
 		[self initial];
 	}
