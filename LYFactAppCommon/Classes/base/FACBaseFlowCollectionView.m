@@ -30,6 +30,28 @@
 
 @implementation FACBaseFlowCollectionView
 
+// MARK: - INIT
 
+- (instancetype)init {
+	UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
+	if (self = [super initWithFrame:CGRectZero collectionViewLayout:layout]) {
+		[self initial];
+	}
+	return self;
+}
+
+- (instancetype)initWithLayout:(__kindof UICollectionViewFlowLayout *)layout {
+	if (self = [super initWithLayout:layout]) {
+	}
+	return self;
+}
+
+// MARK: - METHOD
+
+// MARK: PROPERTY
+
+- (UICollectionViewFlowLayout *)layout {
+	return ((UICollectionViewFlowLayout *)self.collectionViewLayout);
+}
 
 @end

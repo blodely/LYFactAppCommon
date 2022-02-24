@@ -29,6 +29,11 @@
 
 @interface FACBaseFlowCollectionView : FACBaseCollectionView
 
+/// A weak link to collection view layout property, but with type
+@property (nonatomic, readonly, weak) UICollectionViewFlowLayout *layout;
 
+/// override previous class initial method
+/// @param layout flow layout
+- (instancetype)initWithLayout:(__kindof UICollectionViewFlowLayout *)layout;
 
 @end
