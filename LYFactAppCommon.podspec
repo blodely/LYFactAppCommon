@@ -40,7 +40,7 @@ LYFactAppCommon:
   
   s.dependency 'AFNetworking', '~> 4.0.1'
   s.dependency 'FCUUID', '~> 1.3.1'
-  s.dependency 'LYCategory', '~> 1.13.8'
+  s.dependency 'LYCategory', '~> 1.13.9'
   
   s.dependency 'JLRoutes'
   
