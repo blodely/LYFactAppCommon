@@ -33,6 +33,7 @@
 	__weak FACNoInteractView *noInteractView;
 	__weak FACGradientView *gradientView;
 	__weak FACRangeSlider *rangeSlider;
+	__weak FACImageControl *imageCtrl;
 }
 @end
 
@@ -97,6 +98,23 @@
 			[view.rightThumb border1Px];
 			[view.trackBackground border1Px];
 		}
+	}
+	
+	{
+		FACImageControl *view = [[FACImageControl alloc] init];
+		view.translatesAutoresizingMaskIntoConstraints = NO;
+		view.contentMode = UIViewContentModeScaleAspectFill;
+		view.clipsToBounds = YES;
+		[view border1Px];
+		[self.view addSubview:view];
+		imageCtrl = view;
+		
+		[view.leftAnchor constraintEqualToAnchor:self.view.leftAnchor constant:FAC_PADDING].active = YES;
+		[view.topAnchor constraintEqualToAnchor:rangeSlider.bottomAnchor constant:FAC_PADDING].active = YES;
+		[view.widthAnchor constraintEqualToConstant:120].active = YES;
+		[view.heightAnchor constraintEqualToConstant:120].active = YES;
+		
+		[imageCtrl setImageWithURLString:@"https://wx2.sinaimg.cn/mw2000/001NgqBNly1h03siwfgorj60u00k175p02.jpg" andPlaceholderNamed:nil];
 	}
 }
 
