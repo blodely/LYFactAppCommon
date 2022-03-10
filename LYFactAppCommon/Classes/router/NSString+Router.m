@@ -25,6 +25,7 @@
 //
 
 #import "NSString+Router.h"
+#import <LYCategory/LYCategory.h>
 
 
 @implementation NSString (Router)
@@ -35,13 +36,13 @@
 	NSArray *originals = [self componentsSeparatedByString:@"/"];
 	
 	for (NSString *part in originals) {
-		if ([part hasPrefix:@":"] == NO) {
+		if ([part hasPrefix:@":"] == NO && [part isEmpty] == NO) {
 			ret = [ret stringByAppendingFormat:@"/%@", part];
 		}
 	}
 	
 	for (id part in parameters) {
-		ret = [ret stringByAppendingFormat:@"/%@", ret];
+		ret = [ret stringByAppendingFormat:@"/%@", part];
 	}
 	
 	return ret;
