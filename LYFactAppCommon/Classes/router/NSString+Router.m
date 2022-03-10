@@ -29,4 +29,22 @@
 
 @implementation NSString (Router)
 
+- (instancetype)routerParseParams:(NSArray *)parameters {
+	
+	NSString *ret = @"";
+	NSArray *originals = [self componentsSeparatedByString:@"/"];
+	
+	for (NSString *part in originals) {
+		if ([part hasPrefix:@":"] == NO) {
+			ret = [ret stringByAppendingFormat:@"/%@", part];
+		}
+	}
+	
+	for (id part in parameters) {
+		ret = [ret stringByAppendingFormat:@"/%@", ret];
+	}
+	
+	return ret;
+}
+
 @end

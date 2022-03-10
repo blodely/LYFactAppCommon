@@ -29,4 +29,6 @@
 
 @interface NSString (Router)
 
+- (instancetype)routerParseParams:(NSArray *)parameters;
+
 @end
