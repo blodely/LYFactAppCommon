@@ -64,6 +64,7 @@
 #import <LYFactAppCommon/FACAlbumCell.h>
 #import <LYFactAppCommon/FACHomeMenuItemCell.h>
 
+#import <LYFactAppCommon/NSString+Router.h>
 #import <LYFactAppCommon/UIApplication+Router.h>
 #import <LYFactAppCommon/UINavigationController+FAC.h>
 #import <LYFactAppCommon/UIImageView+FactAppCommon.h>
