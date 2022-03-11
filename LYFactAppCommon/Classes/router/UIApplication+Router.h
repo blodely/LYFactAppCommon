@@ -31,4 +31,6 @@
 
 + (void)sharedAppRoute:(NSString *)appscheme to:(NSString *)portal;
 
++ (void)sharedAppRoute:(NSString *)appscheme to:(NSString *)portal parameters:(NSArray *)parameters;
+
 @end

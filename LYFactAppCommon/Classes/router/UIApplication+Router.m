@@ -35,4 +35,9 @@
 	[[UIApplication sharedApplication] justOpenURL:url];
 }
 
++ (void)sharedAppRoute:(NSString *)appscheme to:(NSString *)portal parameters:(NSArray *)parameters {
+	NSURL *url = [NSURL URLWithFormat:@"%@:/%@", appscheme, [portal routerParseParams:parameters]];
+	[[UIApplication sharedApplication] justOpenURL:url];
+}
+
 @end
