@@ -46,6 +46,7 @@ NSString *const FACBaseTableCellIdentifier = @"FACBaseTableCellIdentifier";
     // AS A CUSTOM CELL BASE VIEW, MOST UNLIKELY USING DEFAULT STYLE
     self.backgroundColor = [UIColor clearColor];
     self.selectionStyle = UITableViewCellSelectionStyleNone;
+	self.contentView.hidden = YES;
 }
 
 - (void)awakeFromNib {
