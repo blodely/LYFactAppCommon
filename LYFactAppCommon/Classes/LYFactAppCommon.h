@@ -86,9 +86,6 @@ FOUNDATION_EXPORT CGFloat const FAC_CTL_SMALL;
 
 // MARK: - BLOCKS
 
-typedef void(^FACCTableCell)(FACBaseTableCell *cell);
-typedef void(^FACCCollectionCell)(FACBaseCollectionCell *cell);
-
 // MARK: - CLASS
 
 @interface LYFactAppCommon : NSObject
