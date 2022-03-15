@@ -86,8 +86,8 @@ FOUNDATION_EXPORT CGFloat const FAC_CTL_SMALL;
 
 // MARK: - BLOCKS
 
-typedef void(^FACCTableCell)(__kindof FACBaseTableCell *cell);
-typedef void(^FACCCollectionCell)(__kindof FACBaseCollectionCell *cell);
+typedef void(^FACCTableCell)(FACBaseTableCell *cell);
+typedef void(^FACCCollectionCell)(FACBaseCollectionCell *cell);
 
 // MARK: - CLASS
 
