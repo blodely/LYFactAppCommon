@@ -29,6 +29,8 @@
 #import <LYCategory/LYCategory.h>
 #import <JLRoutes/JLRoutes.h>
 
+// MARK: - GENERAL IMPORTS
+
 #import <LYFactAppCommon/FACBaseVC.h>
 #import <LYFactAppCommon/FACBaseHideNavbarVC.h>
 #import <LYFactAppCommon/FACBaseShowNavbarVC.h>
@@ -74,11 +76,20 @@
 #import <LYFactAppCommon/FACApp.h>
 
 
+// MARK: - CONSTANTS
+
 FOUNDATION_EXPORT CGFloat const FAC_PADDING;
 FOUNDATION_EXPORT CGFloat const FAC_SPACING;
 
 FOUNDATION_EXPORT CGFloat const FAC_CTL_SIDE;
 FOUNDATION_EXPORT CGFloat const FAC_CTL_SMALL;
+
+// MARK: - BLOCKS
+
+typedef void(^FACCTableCell)(__kindof FACBaseTableCell *cell);
+typedef void(^FACCCollectionCell)(__kindof FACBaseCollectionCell *cell);
+
+// MARK: - CLASS
 
 @interface LYFactAppCommon : NSObject
 
