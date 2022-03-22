@@ -49,6 +49,8 @@
 		self.uniqueID = @"space.luoyu.dimo";
 		_loggedIn = NO;
 		_userID = nil;
+		
+		[self synchronize];
 	}
 	return self;
 }
@@ -91,6 +93,28 @@
 }
 
 // MARK: PRIVATE METHOD
+
+- (void)synchronize {
+	
+	NSString *apppath = [self pathToPersist];
+	
+	if ([NSFileManager isFileExistAtPath:apppath]) {
+		return;
+	}
+	
+	// FILE EXIST
+	// THEN
+	// READ IT
+	{
+		FACApp *app = (FACApp *)[NSKeyedUnarchiver unarchiveObjectWithFile:apppath];
+		
+		_loggedIn = app.isLoggedIn;
+		_userID = app.userID;
+		
+		app = nil;
+	}
+}
+
 // MARK: PROPERTY
 // MARK: BLOCK
 

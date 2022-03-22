@@ -41,4 +41,7 @@
 /// App user logout
 - (void)logout;
 
+/// App synchronization
+- (void)synchronize;
+
 @end
