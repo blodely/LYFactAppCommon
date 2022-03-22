@@ -98,7 +98,7 @@
 	
 	NSString *apppath = [self pathToPersist];
 	
-	if ([NSFileManager isFileExistAtPath:apppath]) {
+	if ([NSFileManager isFileExistAtPath:apppath] == NO) {
 		return;
 	}
 	
