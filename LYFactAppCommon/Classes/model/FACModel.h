@@ -35,4 +35,7 @@
 /// Persist model to archived file
 - (BOOL)persist;
 
+/// Get the path to persist model instance
+- (NSString *)pathToPersist;
+
 @end

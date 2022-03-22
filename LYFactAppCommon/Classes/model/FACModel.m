@@ -84,6 +84,15 @@
 	return result;
 }
 
+- (NSString *)pathToPersist {
+	if (_uniqueID == nil || [_uniqueID isEmpty]) {
+		// NOT A HEALTH MODEL INSTANCE
+		return nil;
+	}
+	
+	return [NSHomeDirectory() stringByAppendingFormat:@"/Documents/%@/%@", NSStringFromClass([self class]), _uniqueID];
+}
+
 // MARK: PRIVATE METHOD
 
 // MARK: - OVERRIDE
