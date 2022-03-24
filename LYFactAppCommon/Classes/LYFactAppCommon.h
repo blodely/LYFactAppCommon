@@ -67,6 +67,7 @@
 #import <LYFactAppCommon/FACMerchandiseCell.h>
 #import <LYFactAppCommon/FACAlbumCell.h>
 #import <LYFactAppCommon/FACHomeMenuItemCell.h>
+#import <LYFactAppCommon/FACChatBaseCell.h>
 
 #import <LYFactAppCommon/NSString+Router.h>
 #import <LYFactAppCommon/UIApplication+Router.h>
