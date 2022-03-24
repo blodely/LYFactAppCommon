@@ -49,7 +49,7 @@
 	}
 	
 	{
-		self.backgroundColor = [UIColor colorWithHex:@"" andAlpha:1];
+		self.backgroundColor = [UIColor colorWithHex:@"#f2f2f2" andAlpha:1];
 		[self roundedCornerRadius:floor( _height * 0.5 )];
 	}
 	
@@ -72,6 +72,7 @@
 - (void)setHeight:(CGFloat)height {
 	_height = height;
 	
+	[self roundedCornerRadius:floor( _height * 0.5 )];
 	[guideHeight.heightAnchor constraintEqualToConstant:_height].active = YES;
 }
 
