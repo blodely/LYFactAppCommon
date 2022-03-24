@@ -46,9 +46,10 @@
 	[super loadView];
 	
 	{
+		// MARK: Navigation view
 		FACBaseNavView *view = [[FACBaseNavView alloc] init];
 		view.translatesAutoresizingMaskIntoConstraints = NO;
-		view.lblTitle.text = @"ViewController";
+		view.lblTitle.text = @"LHN ViewController";
 		[self.view addSubview:view];
 		
 		[view navBackAction:^{
@@ -59,10 +60,23 @@
 		[view.rightAnchor constraintEqualToAnchor:self.view.rightAnchor].active = YES;
 		[view.topAnchor constraintEqualToAnchor:self.view.topAnchor].active = YES;
 		
-		
 		// FOR TESTING PURPOSE, DISPLAY VIEW'S BORDER
 		[view border1Px];
 		[view.btnBack border1Px];
+	}
+	
+	{
+		// MARK: Rounded Textfield view
+		FACRoundedTextField *view = [[FACRoundedTextField alloc] init];
+		view.translatesAutoresizingMaskIntoConstraints = NO;
+		view.textfield;
+		[self.view addSubview:view];
+		
+		[view border1Px];
+		
+		[view.topAnchor constraintEqualToAnchor:self.view.safeAreaLayoutGuide.topAnchor constant:100].active = YES;
+		[view.leftAnchor constraintEqualToAnchor:self.view.leftAnchor constant:FAC_PADDING].active = YES;
+		[view.rightAnchor constraintEqualToAnchor:self.view.rightAnchor constant:-FAC_PADDING].active = YES;
 	}
 }
 
