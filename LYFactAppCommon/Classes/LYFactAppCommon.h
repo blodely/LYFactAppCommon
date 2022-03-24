@@ -58,8 +58,9 @@
 #import <LYFactAppCommon/FACPopBaseView.h>
 //#import <LYFactAppCommon/FACRangeSlider.h> // DISABLED
 #import <LYFactAppCommon/FACEmpty.h>
-#import <LYFactAppCommon/FACBorderTableCell.h>
+#import <LYFactAppCommon/FACRoundedTextField.h>
 
+#import <LYFactAppCommon/FACBorderTableCell.h>
 #import <LYFactAppCommon/FACBannerCell.h>
 #import <LYFactAppCommon/FACMenuItemCell.h>
 #import <LYFactAppCommon/FACNewsItemCell.h>
