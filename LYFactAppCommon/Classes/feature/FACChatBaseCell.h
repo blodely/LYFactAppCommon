@@ -27,8 +27,21 @@
 #import <LYFactAppCommon/LYFactAppCommon.h>
 
 
-@interface FACChatBaseCell : FACBaseTableCell
+typedef NS_ENUM(NSUInteger, FACChatBaseCellSide) {
+	FACChatBaseCellSideRight = 0,
+	FACChatBaseCellSideLeft = 1,
+};
 
+@interface FACChatBaseCell : FACBaseTableCell {
+	FACChatBaseCellSide pSide;
+}
+@property (nonatomic, readonly) FACChatBaseCellSide side;
 @property (nonatomic, weak) FACLabelControl *lblContent;
+@end
 
+
+@interface FACChatBaseLeftCell : FACChatBaseCell
+@end
+
+@interface FACChatBaseRightCell : FACChatBaseCell
 @end

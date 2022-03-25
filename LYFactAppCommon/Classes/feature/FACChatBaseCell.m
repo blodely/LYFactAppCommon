@@ -28,7 +28,11 @@
 #import <LYFactAppCommon/LYFactAppCommon.h>
 
 
+// MARK: - FACChatBaseCell
+
 @implementation FACChatBaseCell
+
+// MARK: INIT
 
 - (void)initial {
 	[super initial];
@@ -39,6 +43,40 @@
 		[self addSubview:view];
 		_lblContent = view;
 	}
+}
+
+// MARK: METHOD
+
+// MARK: PRIVATE METHOD
+
+// MARK: PROPERTY
+
+- (FACChatBaseCellSide)side {
+	return pSide;
+}
+
+@end
+
+// MARK: - FACChatBaseLeftCell
+
+@implementation FACChatBaseLeftCell
+
+- (void)initial {
+	[super initial];
+	
+	pSide = FACChatBaseCellSideLeft;
+}
+
+@end
+
+// MARK: - FACChatBaseRightCell
+
+@implementation FACChatBaseRightCell
+
+- (void)initial {
+	[super initial];
+	
+	pSide = FACChatBaseCellSideRight;
 }
 
 @end
