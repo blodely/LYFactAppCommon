@@ -24,7 +24,7 @@
 //	THE SOFTWARE.
 //
 
-#import <LYFactAppCommon/LYFactAppCommon.h>
+#import <LYFactAppCommon/FACBaseView.h>
 
 
 typedef NS_ENUM(NSUInteger, FACEmptyType) {
