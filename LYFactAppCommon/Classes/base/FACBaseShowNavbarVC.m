@@ -40,3 +40,30 @@
 }
 
 @end
+
+@implementation FACBaseShowNavbarEmptyVC
+
+- (void)loadView {
+	[super loadView];
+	
+	{
+		// MARK: - EMPTY DATA VIEW
+		FACEmpty *view = [[FACEmpty alloc] init];
+		view.translatesAutoresizingMaskIntoConstraints = NO;
+		view.hidden = YES;
+		[self.view addSubview:view];
+		vEmpty = view;
+		
+		[view.leftAnchor constraintEqualToAnchor:self.view.leftAnchor].active = YES;
+		[view.rightAnchor constraintEqualToAnchor:self.view.rightAnchor].active = YES;
+		[view.centerYAnchor constraintEqualToAnchor:self.view.centerYAnchor].active = YES;
+	}
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+	[super viewWillAppear:animated];
+	[self.navigationController setNavigationBarHidden:NO animated:animated];
+	[self setNeedsStatusBarAppearanceUpdate];
+}
+
+@end
