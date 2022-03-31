@@ -60,6 +60,8 @@
 #import <LYFactAppCommon/FACEmpty.h>
 #import <LYFactAppCommon/FACRoundedTextField.h>
 
+#import <LYFactAppCommon/FACBaseEmptyVC.h>
+
 #import <LYFactAppCommon/FACBorderTableCell.h>
 #import <LYFactAppCommon/FACBannerCell.h>
 #import <LYFactAppCommon/FACMenuItemCell.h>
