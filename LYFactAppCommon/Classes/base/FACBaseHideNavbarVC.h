@@ -25,7 +25,13 @@
 //
 
 #import <LYFactAppCommon/FACBaseVC.h>
+#import <LYFactAppCommon/FACEmpty.h>
 
 
 @interface FACBaseHideNavbarVC : FACBaseVC
+@end
+
+@interface FACBaseHideNavbarEmptyVC : FACBaseHideNavbarVC {
+	__weak FACEmpty *vEmpty;
+}
 @end
