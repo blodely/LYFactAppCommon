@@ -37,4 +37,9 @@ typedef NS_ENUM(NSUInteger, FACEmptyType) {
 @property (nonatomic, weak) UIImageView *ivPic;
 @property (nonatomic, weak) UILabel *lblTitle;
 @property (nonatomic, assign) FACEmptyType type;
+
+@property (nonatomic, weak) UIImage *image;
+@property (nonatomic, weak) NSString *text;
+@property (nonatomic, weak) UIFont *font;
+@property (nonatomic, weak) UIColor *textColor;
 @end

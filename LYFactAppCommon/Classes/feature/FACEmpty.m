@@ -89,4 +89,36 @@
 
 // MARK: PROPERTY
 
+- (void)setImage:(UIImage *)image {
+	_ivPic.image = image;
+}
+
+- (UIImage *)image {
+	return _ivPic.image;
+}
+
+- (void)setText:(NSString *)text {
+	_lblTitle.text = text;
+}
+
+- (NSString *)text {
+	return _lblTitle.text;
+}
+
+- (void)setFont:(UIFont *)font {
+	_lblTitle.font = font;
+}
+
+- (UIFont *)font {
+	return _lblTitle.font;
+}
+
+- (void)setTextColor:(UIColor *)textColor {
+	_lblTitle.textColor = textColor;
+}
+
+- (UIColor *)textColor {
+	return _lblTitle.textColor;
+}
+
 @end
