@@ -38,8 +38,10 @@
 	[super initial];
 	
 	{
+		// MARK: MESSAGE CONTENT LABEL
 		FACLabelControl *view = [[FACLabelControl alloc] init];
 		view.translatesAutoresizingMaskIntoConstraints = NO;
+		view.numberOfLines = 0;
 		[self addSubview:view];
 		_lblContent = view;
 	}
