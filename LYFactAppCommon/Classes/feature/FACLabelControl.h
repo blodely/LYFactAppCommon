@@ -32,11 +32,26 @@
  Moved from LYCore library.
  */
 @interface FACLabelControl : FACBaseControl
+
+/// subview label
 @property (nonatomic, weak) UILabel *label;
+
+/// link subview label's font property
 @property (nonatomic, weak) UIFont *font;
+
+/// link subview label's numberOfLines property
 @property (nonatomic) NSInteger numberOfLines;
+
+/// link subview label's text property
 @property (nonatomic, weak) NSString *text;
+
+/// link subview label's textAlignment property
 @property (nonatomic) NSTextAlignment textAlignment;
+
+/// link subview label's textColor property
 @property (nonatomic, weak) UIColor *textColor;
+
+/// link subview label's attributedText property
 @property (nonatomic, weak) NSAttributedString *attributedText;
+
 @end
