@@ -58,6 +58,15 @@
 	return self;
 }
 
+- (instancetype)initWithHexColor:(NSString *)color {
+	if (self = [super init]) {
+		self.userInteractionEnabled = NO;
+		self.backgroundColor = [UIColor colorWithHex:color andAlpha:1];
+		[self initial];
+	}
+	return self;
+}
+
 - (void)initial {
 }
 
