@@ -71,7 +71,7 @@
 
 @end
 
-// MARK: -
+// MARK: - Persistence
 
 @implementation FACModel (Persistence)
 
@@ -106,5 +106,13 @@
 	
 	return [NSHomeDirectory() stringByAppendingFormat:@"/Documents/%@/%@", NSStringFromClass([self class]), self.uniqueID];
 }
+
+@end
+
+// MARK: - Creation
+
+@implementation FACModel (Creation)
+
+
 
 @end

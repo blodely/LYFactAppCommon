@@ -36,7 +36,7 @@
 
 @end
 
-// MARK: -
+// MARK: - Persistence
 
 @interface FACModel (Persistence)
 
@@ -45,5 +45,13 @@
 
 /// Get the path to persist model instance
 - (NSString *)pathToPersist;
+
+@end
+
+// MARK: - Creation
+
+@interface FACModel (Creation)
+
+
 
 @end
