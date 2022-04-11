@@ -113,6 +113,12 @@
 
 @implementation FACModel (Creation)
 
++ (instancetype)modelWithRaw:(id)rawdata {
+	return nil;
+}
 
++ (NSArray *)modelsWithRaw:(id)rawdata {
+	return nil;
+}
 
 @end

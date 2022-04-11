@@ -52,6 +52,8 @@
 
 @interface FACModel (Creation)
 
++ (instancetype)modelWithRaw:(id)rawdata;
 
++ (NSArray *)modelsWithRaw:(id)rawdata;
 
 @end
