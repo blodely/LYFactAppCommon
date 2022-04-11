@@ -61,17 +61,31 @@
 
 // MARK: - METHOD
 
+// MARK: PRIVATE METHOD
+
+// MARK: - OVERRIDE
+
+- (NSString *)description {
+	return [NSString stringWithFormat:@"%@ -> UniqueID=%@", NSStringFromClass([self class]), _uniqueID];
+}
+
+@end
+
+// MARK: -
+
+@implementation FACModel (Persistence)
+
 - (BOOL)persist {
 	
 	// CREATE FOLDER IF IT'S NOT EXIST
 	[NSFileManager createFolderIfNotExistInDocuments:NSStringFromClass([self class])];
 	
-	if (_uniqueID == nil || [_uniqueID isEmpty]) {
+	if (self.uniqueID == nil || [self.uniqueID isEmpty]) {
 		// NOT A HEALTH MODEL INSTANCE
 		return NO;
 	}
 	
-	NSString *modelpath = [NSHomeDirectory() stringByAppendingFormat:@"/Documents/%@/%@", NSStringFromClass([self class]), _uniqueID];
+	NSString *modelpath = [NSHomeDirectory() stringByAppendingFormat:@"/Documents/%@/%@", NSStringFromClass([self class]), self.uniqueID];
 	
 	if ([NSFileManager isFileExistAtPath:modelpath]) {
 		// FILE ALREADY EXIST
@@ -85,20 +99,12 @@
 }
 
 - (NSString *)pathToPersist {
-	if (_uniqueID == nil || [_uniqueID isEmpty]) {
+	if (self.uniqueID == nil || [self.uniqueID isEmpty]) {
 		// NOT A HEALTH MODEL INSTANCE
 		return nil;
 	}
 	
-	return [NSHomeDirectory() stringByAppendingFormat:@"/Documents/%@/%@", NSStringFromClass([self class]), _uniqueID];
-}
-
-// MARK: PRIVATE METHOD
-
-// MARK: - OVERRIDE
-
-- (NSString *)description {
-	return [NSString stringWithFormat:@"%@ -> UniqueID=%@", NSStringFromClass([self class]), _uniqueID];
+	return [NSHomeDirectory() stringByAppendingFormat:@"/Documents/%@/%@", NSStringFromClass([self class]), self.uniqueID];
 }
 
 @end

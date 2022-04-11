@@ -32,6 +32,14 @@
 /// Unique ID
 @property (nonatomic, strong) NSString *uniqueID;
 
+
+
+@end
+
+// MARK: -
+
+@interface FACModel (Persistence)
+
 /// Persist model to archived file
 - (BOOL)persist;
 
