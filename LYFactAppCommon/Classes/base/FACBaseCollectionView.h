@@ -29,8 +29,11 @@
 
 @interface FACBaseCollectionView : UICollectionView
 
+/// Creates a collection view object with the specified layout and default zero frame.
+/// @param layout layout object
 - (instancetype)initWithLayout:(__kindof UICollectionViewLayout *)layout;
 
+/// initial called method
 - (void)initial;
 
 @end
