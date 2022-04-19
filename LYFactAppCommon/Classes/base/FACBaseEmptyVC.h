@@ -28,7 +28,9 @@
 #import <LYFactAppCommon/FACEmpty.h>
 
 
+/// Base view controller with empty data view on background by default
 @interface FACBaseEmptyVC : FACBaseVC {
+	
 	__weak FACEmpty *vEmpty;
 }
 
