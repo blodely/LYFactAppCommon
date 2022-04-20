@@ -52,6 +52,8 @@
 
 @interface FACModel (Creation)
 
+/// Create model instance with raw data, method for override
+/// @param rawdata id data
 + (instancetype)modelWithRaw:(id)rawdata;
 
 + (NSArray *)modelsWithRaw:(id)rawdata;
