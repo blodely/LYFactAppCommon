@@ -56,6 +56,8 @@
 /// @param rawdata id data
 + (instancetype)modelWithRaw:(id)rawdata;
 
+/// Generate model instances array with raw data or data list, method for override
+/// @param rawdata id data
 + (NSArray *)modelsWithRaw:(id)rawdata;
 
 @end
