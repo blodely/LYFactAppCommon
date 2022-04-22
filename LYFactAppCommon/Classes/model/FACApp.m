@@ -92,9 +92,8 @@
 	[self persist];
 }
 
-// MARK: PRIVATE METHOD
-
 - (void)synchronize {
+	// PUBLIC
 	
 	NSString *apppath = [self pathToPersist];
 	
@@ -114,6 +113,8 @@
 		app = nil;
 	}
 }
+
+// MARK: PRIVATE METHOD
 
 // MARK: PROPERTY
 // MARK: BLOCK
