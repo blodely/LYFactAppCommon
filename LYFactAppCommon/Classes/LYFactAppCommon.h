@@ -45,6 +45,7 @@
 #import <LYFactAppCommon/FACGradientView.h>
 #import <LYFactAppCommon/FACGradientControl.h>
 #import <LYFactAppCommon/FACPopBaseView.h>
+#import <LYFactAppCommon/FACDatePickerPop.h>
 //#import <LYFactAppCommon/FACRangeSlider.h> // DISABLED
 #import <LYFactAppCommon/FACEmpty.h>
 #import <LYFactAppCommon/FACRoundedTextField.h>
