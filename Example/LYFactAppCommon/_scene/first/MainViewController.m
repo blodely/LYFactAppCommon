@@ -58,6 +58,14 @@
 	[[FACPopBaseView pop] show];
 }
 
+- (IBAction)showDatePickerPopButtonPressed:(id)sender {
+    FACDatePickerPop *popview = [FACDatePickerPop pop];
+    [popview datePickerFinished:^(NSDate *result) {
+        NSLog(@"PICKER DATE %@", result);
+    }];
+    [popview show];
+}
+
 // MARK: - INIT
 
 - (instancetype)init {
