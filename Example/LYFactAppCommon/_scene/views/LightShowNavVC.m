@@ -34,6 +34,7 @@
 	__weak FACGradientView *gradientView;
 	__weak FACRangeSlider *rangeSlider;
 	__weak FACImageControl *imageCtrl;
+    __weak FACBlurView *blurMask;
 }
 @end
 
@@ -116,6 +117,18 @@
 		
 		[imageCtrl setImageWithURLString:@"https://wx2.sinaimg.cn/mw2000/001NgqBNly1h03siwfgorj60u00k175p02.jpg" andPlaceholderNamed:nil];
 	}
+    
+    {
+        FACBlurView *view = [[FACBlurView alloc] init];
+        view.translatesAutoresizingMaskIntoConstraints = NO;
+        [self.view addSubview:view];
+        blurMask = view;
+        
+        [view.leftAnchor constraintEqualToAnchor:imageCtrl.leftAnchor].active = YES;
+        [view.rightAnchor constraintEqualToAnchor:imageCtrl.rightAnchor].active = YES;
+        [view.bottomAnchor constraintEqualToAnchor:imageCtrl.bottomAnchor].active = YES;
+        [view.heightAnchor constraintEqualToConstant:20].active = YES;
+    }
 }
 
 @end
