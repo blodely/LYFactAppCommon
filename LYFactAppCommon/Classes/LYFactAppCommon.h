@@ -44,6 +44,7 @@
 #import <LYFactAppCommon/FACLabelControl.h>
 #import <LYFactAppCommon/FACGradientView.h>
 #import <LYFactAppCommon/FACGradientControl.h>
+#import <LYFactAppCommon/FACBlurView.h>
 #import <LYFactAppCommon/FACPopBaseView.h>
 #import <LYFactAppCommon/FACDatePickerPop.h>
 //#import <LYFactAppCommon/FACRangeSlider.h> // DISABLED
