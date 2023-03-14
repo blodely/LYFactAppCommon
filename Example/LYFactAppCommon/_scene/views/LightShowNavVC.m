@@ -35,6 +35,7 @@
 	__weak FACRangeSlider *rangeSlider;
 	__weak FACImageControl *imageCtrl;
     __weak FACBlurView *blurMask;
+    __weak FACInnerShadowLabel *innerLabel;
 }
 @end
 
@@ -128,6 +129,25 @@
         [view.rightAnchor constraintEqualToAnchor:imageCtrl.rightAnchor].active = YES;
         [view.bottomAnchor constraintEqualToAnchor:imageCtrl.bottomAnchor].active = YES;
         [view.heightAnchor constraintEqualToConstant:20].active = YES;
+    }
+    
+    {
+        FACInnerShadowLabel *view = [[FACInnerShadowLabel alloc] init];
+        view.translatesAutoresizingMaskIntoConstraints = NO;
+        view.textColor = [UIColor grayColor];
+        view.font = [UIFont boldSystemFontOfSize:17];
+        view.text = @"INNER LABEL TEXT";
+        [self.view addSubview:view];
+        innerLabel = view;
+        
+        [view.leftAnchor constraintEqualToAnchor:self.view.leftAnchor constant:FAC_PADDING].active = YES;
+        [view.rightAnchor constraintEqualToAnchor:self.view.rightAnchor constant:-FAC_PADDING].active = YES;
+        [view.topAnchor constraintEqualToAnchor:blurMask.bottomAnchor constant:FAC_PADDING].active = YES;
+        [view.heightAnchor constraintEqualToConstant:44].active = YES;
+        
+        innerLabel.innerShadowBlur = 3;
+        innerLabel.innerShadowColor = [UIColor blackColor];
+        innerLabel.innerShadowOffset = (CGSize){0, 1};
     }
 }
 
