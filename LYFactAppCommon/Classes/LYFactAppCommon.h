@@ -41,7 +41,7 @@
 #import <LYFactAppCommon/FACNoInteractView.h>
 #import <LYFactAppCommon/FACImageControl.h>
 #import <LYFactAppCommon/FACImageToggle.h>
-#import <LYFactAppCommon/FACInnerShadowLabel.h>
+//#import <LYFactAppCommon/FACInnerShadowLabel.h> // DISABLED
 #import <LYFactAppCommon/FACLabelControl.h>
 #import <LYFactAppCommon/FACGradientView.h>
 #import <LYFactAppCommon/FACGradientControl.h>
@@ -51,6 +51,7 @@
 //#import <LYFactAppCommon/FACRangeSlider.h> // DISABLED
 #import <LYFactAppCommon/FACEmpty.h>
 #import <LYFactAppCommon/FACRoundedTextField.h>
+#import <LYFactAppCommon/FACTestButton.h>
 
 #import <LYFactAppCommon/FACBorderTableCell.h>
 #import <LYFactAppCommon/FACBannerCell.h>
